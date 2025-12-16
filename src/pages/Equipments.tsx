@@ -38,7 +38,7 @@ const Equipments: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen pt-20">
+        <div className="min-h-screen">
             {/* Top Carousel */}
             <AnimatedCarousel
                 slides={equipmentCarouselSlides}

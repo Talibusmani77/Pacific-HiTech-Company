@@ -12,7 +12,7 @@ const Products: React.FC = () => {
     const [selectedProduct, setSelectedProduct] = React.useState<typeof productsList[0] | null>(null);
 
     return (
-        <div className="pt-20 min-h-screen bg-industrial-slate-50">
+        <div className="min-h-screen bg-industrial-slate-50">
             {/* Page Header */}
             <section className="bg-industrial-slate-900 text-white py-20 relative overflow-hidden">
                 <div className="absolute inset-0 z-0">

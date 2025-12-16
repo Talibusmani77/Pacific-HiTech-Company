@@ -53,7 +53,7 @@ const Work: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen pt-20">
+        <div className="min-h-screen">
             {/* Top Carousel */}
             <AnimatedCarousel
                 slides={workCarouselSlides}
@@ -90,8 +90,8 @@ const Work: React.FC = () => {
                                     setVisibleProjects(6);
                                 }}
                                 className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category
-                                        ? 'bg-cta-blue text-white shadow-lg scale-105'
-                                        : 'bg-industrial-slate-100 text-industrial-slate-700 hover:bg-industrial-slate-200'
+                                    ? 'bg-cta-blue text-white shadow-lg scale-105'
+                                    : 'bg-industrial-slate-100 text-industrial-slate-700 hover:bg-industrial-slate-200'
                                     }`}
                             >
                                 {category}

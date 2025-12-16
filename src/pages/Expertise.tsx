@@ -52,7 +52,7 @@ const Expertise: React.FC = () => {
     }, []);
 
     return (
-        <div className="min-h-screen pt-20">
+        <div className="min-h-screen">
             {/* Top Carousel */}
             <div className="relative z-0">
                 <AnimatedCarousel

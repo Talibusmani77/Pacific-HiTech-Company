@@ -15,7 +15,7 @@ const About: React.FC = () => {
     ];
 
     return (
-        <div className="pt-20 min-h-screen">
+        <div className="min-h-screen">
             {/* Page Header */}
             <section className="bg-industrial-slate-900 text-white py-20 relative overflow-hidden">
                 <div className="absolute inset-0 z-0">

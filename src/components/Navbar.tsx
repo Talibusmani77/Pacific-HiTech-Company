@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 font-sans">
+        <div className="relative lg:fixed top-0 left-0 right-0 z-50 font-sans">
             <MiniNavbar />
             <nav
                 className={`transition-all duration-300 w-full ${isScrolled
