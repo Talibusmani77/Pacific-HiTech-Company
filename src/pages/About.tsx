@@ -17,7 +17,7 @@ const About: React.FC = () => {
     return (
         <div className="min-h-screen">
             {/* Page Header */}
-            <section className="bg-industrial-slate-900 text-white py-20 relative overflow-hidden">
+            <section className="bg-industrial-slate-900 text-white py-20 lg:pt-48 lg:pb-20 relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/images/hero/steel-fabrication.jpg"

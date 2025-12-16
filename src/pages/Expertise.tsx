@@ -66,7 +66,7 @@ const Expertise: React.FC = () => {
             </div>
 
             {/* Page Intro */}
-            <section className="section-padding bg-white">
+            <section className="section-padding lg:pt-48 lg:pb-24 bg-white">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center animate-on-scroll">
                         <h1 className="text-h1 font-bold text-industrial-slate-900 mb-6">

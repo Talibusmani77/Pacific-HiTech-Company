@@ -49,11 +49,11 @@ const Home: React.FC = () => {
                 </div>
 
                 {/* Dark Overlay for Better Text Contrast */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60 z-[1]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60 z-[1] pointer-events-none" />
 
                 {/* Hero Content - Centered */}
-                <div className="absolute inset-0 flex items-center justify-center z-[5]">
-                    <div className="container-custom text-center">
+                <div className="absolute inset-0 flex items-center justify-center z-[5] pointer-events-none">
+                    <div className="container-custom text-center pointer-events-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
