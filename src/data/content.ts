@@ -292,70 +292,90 @@ export const equipmentList = [
         name: "Sunrise Hydraulic",
         category: "Hydraulic Press",
         specs: ["High-pressure capacity", "Precision control", "Heavy-duty construction"],
-        image: "/images/equipment/equipment-1.jpg"
+        image: "/images/equipment/equipment-1.jpg",
+        fullDescription: "The Sunrise Hydraulic Press is a versatile machine designed for high-capacity industrial applications. It offers uniform pressure distribution, making it ideal for bending, forming, and punching operations with exceptional accuracy.",
+        features: ["Automatic pressure control", "Overload protection", "Energy-efficient hydraulic system"]
     },
     {
         id: 2,
         name: "DURMA",
         category: "Press Brake",
         specs: ["CNC controlled", "Multi-axis bending", "High accuracy"],
-        image: "/images/equipment/equipment-2.jpg"
+        image: "/images/equipment/equipment-2.jpg",
+        fullDescription: "DURMA Press Brakes are known for their precision and reliability. Equipped with advanced CNC controls, this machine ensures accurate bending angles and consistent repeatability for complex sheet metal parts.",
+        features: ["User-friendly CNC interface", "High-speed back gauge", "Automatic crowning system"]
     },
     {
         id: 3,
         name: "Baykal",
         category: "Shearing Machine",
         specs: ["Hydraulic guillotine", "Thick plate cutting", "Precision shearing"],
-        image: "/images/equipment/equipment-3.jpg"
+        image: "/images/equipment/equipment-3.jpg",
+        fullDescription: "The Baykal Hydraulic Guillotine Shear delivers clean and straight cuts on various metal thicknesses. Its robust construction minimizes vibration, ensuring high-quality shearing for heavy-duty production.",
+        features: ["Adjustable blade gap", "Swing beam design", "Digital cutting angle adjustment"]
     },
     {
         id: 4,
         name: "BST",
         category: "Plate Rolling",
         specs: ["3-roll design", "Large diameter capacity", "Heavy gauge rolling"],
-        image: "/images/equipment/equipment-4.jpg"
+        image: "/images/equipment/equipment-4.jpg",
+        fullDescription: "Our BST Plate Rolling machine features a powerful 3-roll system capable of rolling heavy plates into precise cylinders and cones. Ideally suited for pressure vessel and tank fabrication.",
+        features: ["Hydraulic roll positioning", "Drop-end for easy removal", "Induction hardened rolls"]
     },
     {
         id: 5,
         name: "Q35Y Hydraulic Iron Worker",
         category: "Multi-function",
         specs: ["Punching", "Shearing", "Notching capabilities"],
-        image: "/images/equipment/equipment-5.jpg"
+        image: "/images/equipment/equipment-5.jpg",
+        fullDescription: "The Q35Y Industrial Iron Worker is a multi-functional powerhouse. It combines punching, shearing, and notching stations in one unit, significantly improving workshop efficiency and versatility.",
+        features: ["Dual-operator capability", "Adjustable stroke", "Quick-change tooling system"]
     },
     {
         id: 6,
         name: "ESTUN E21S Hydraulic Guillotine",
         category: "Shearing",
         specs: ["CNC control", "High precision", "Safety features"],
-        image: "/images/equipment/equipment-6.jpg"
+        image: "/images/equipment/equipment-6.jpg",
+        fullDescription: "Featuring the ESTUN E21S CNC controller, this hydraulic guillotine offers programmable back-gauge positioning for high-speed, repetitive cutting tasks with superior accuracy.",
+        features: ["E21S CNC System", "Ball screw back gauge", "Motorized blade adjustment"]
     },
     {
         id: 7,
         name: "English CNC ZR41 Press Brake",
         category: "Press Brake",
         specs: ["CNC controlled", "Precision bending", "Multi-axis"],
-        image: "/images/equipment/equipment-7.jpg"
+        image: "/images/equipment/equipment-7.jpg",
+        fullDescription: "The CNC ZR41 Press Brake brings English engineering precision to our shop floor. It is designed for intricate bending operations, ensuring tight tolerances for critical components.",
+        features: ["Advanced synchronisation", "Deep throat depth", "Fast approach and return speeds"]
     },
     {
         id: 8,
         name: "W11S 3-Roll Plate Roller",
         category: "Plate Rolling",
         specs: ["Symmetric rolling", "Large capacity", "Pre-bending capability"],
-        image: "/images/equipment/equipment-8.jpg"
+        image: "/images/equipment/equipment-8.jpg",
+        fullDescription: "The W11S Universal Plate Rolling Machine with pre-bending capability ensures high-precision rolling with minimal flat ends. It is essential for producing high-quality cylindrical and conical parts.",
+        features: ["Upper roll universal movement", "PLC control system", "Hydraulic drive"]
     },
     {
         id: 9,
         name: "Pneumatic Open Front Press",
         category: "Press",
         specs: ["Fast operation", "Precision stamping", "Versatile tooling"],
-        image: "/images/equipment/equipment-9.jpg"
+        image: "/images/equipment/equipment-9.jpg",
+        fullDescription: "This Pneumatic Open Front Press provides high-speed stamping and forming capabilities. It allows for easy access to the die area, making it suitable for a wide range of sheet metal operations.",
+        features: ["Pneumatic clutch and brake", "Adjustable slide", "Safety light curtains"]
     },
     {
         id: 10,
         name: "Duct Lock Former",
         category: "Duct Fabrication",
         specs: ["Automated forming", "Consistent quality", "High-speed production"],
-        image: "/images/equipment/equipment-10.jpg"
+        image: "/images/equipment/equipment-10.jpg",
+        fullDescription: "The Duct Lock Former is specialized for HVAC duct manufacturing using Pittsburgh lock seams. It ensures airtight and durable joints for high-quality ductwork systems.",
+        features: ["Quiet operation", "Multiple seam profiles", "Heavy-duty gear transmission"]
     }
 ];
 

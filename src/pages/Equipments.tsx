@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedCarousel from '@/components/AnimatedCarousel';
-import ContactModal from '@/components/ContactModal';
+import EquipmentModal from '@/components/EquipmentModal';
 import { equipmentList } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
 import { FileText } from 'lucide-react';
@@ -29,12 +29,10 @@ const equipmentCarouselSlides = [
 
 const Equipments: React.FC = () => {
     const t = useTranslation();
-    const [modalOpen, setModalOpen] = useState(false);
     const [selectedMachine, setSelectedMachine] = useState<string>('');
 
     const handleRequestSpec = (machineName: string) => {
         setSelectedMachine(machineName);
-        setModalOpen(true);
     };
 
     return (
@@ -106,11 +104,11 @@ const Equipments: React.FC = () => {
                                     </ul>
 
                                     <button
-                                        onClick={() => handleRequestSpec(equipment.name)}
-                                        className="w-full btn-outline flex items-center justify-center space-x-2"
+                                        onClick={() => handleRequestSpec(equipment.name)} // Keeping function name for minimal diff but logic changes
+                                        className="w-full btn-outline flex items-center justify-center space-x-2 group-hover:bg-industrial-blue-500 group-hover:text-white group-hover:border-industrial-blue-500 transition-all duration-300"
                                     >
                                         <FileText className="w-4 h-4" />
-                                        <span>{t.equipments.requestSpec}</span>
+                                        <span>View Details</span>
                                     </button>
                                 </div>
                             </motion.div>
@@ -119,11 +117,12 @@ const Equipments: React.FC = () => {
                 </div>
             </section>
 
-            {/* Contact Modal */}
-            <ContactModal
-                isOpen={modalOpen}
-                onClose={() => setModalOpen(false)}
-                prefilledData={{ service: selectedMachine }}
+            {/* Equipment Modal */}
+            <EquipmentModal
+                equipment={selectedMachine ? equipmentList.find(e => e.name === selectedMachine) || null : null}
+                onClose={() => {
+                    setSelectedMachine('');
+                }}
             />
         </div>
     );
