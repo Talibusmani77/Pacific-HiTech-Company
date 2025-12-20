@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import AnimatedCarousel from '@/components/AnimatedCarousel';
-import { heroSlides, serviceCards, whyChooseUs, projectsData, productsList } from '@/data/content';
+import { heroSlides, productsList, projectsData, serviceCards, whyChooseUs } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
+import { motion } from 'framer-motion';
 import * as Icons from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
     const t = useTranslation();
@@ -115,7 +115,7 @@ const Home: React.FC = () => {
                             className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl group"
                         >
                             <img
-                                src="/images/home/carousel-1.jpg"
+                                src="/images/hero/man.webp"
                                 alt="About Pacific Hitech"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
@@ -126,36 +126,45 @@ const Home: React.FC = () => {
             </section>
 
             {/* Products Range Section - Auto Scrolling Marquee */}
-            <section className="py-16 bg-industrial-slate-900 text-white overflow-hidden">
-                <div className="container-custom mb-8 text-center">
-                    <h3 className="text-2xl font-bold mb-2">
-                        {t.products.title}
-                    </h3>
-                    <p className="text-white/70 mb-8">
-                        {t.products.subtitle}
-                    </p>
-                </div>
+           <section className="py-16 bg-industrial-slate-900 text-white overflow-hidden">
+    <div className="container-custom mb-8 text-center">
+        <h3 className="text-2xl font-bold mb-2">
+            {t.products.title}
+        </h3>
+        <p className="text-white/70 mb-8">
+            {t.products.subtitle}
+        </p>
+    </div>
 
-                <div className="relative w-full overflow-hidden mb-10">
-                    <div className="flex space-x-8 animate-marquee-reverse whitespace-nowrap">
-                        {[...productsList, ...productsList].map((product, index) => (
-                            <div key={`${product.id}-${index}`} className="inline-flex flex-col items-center w-64 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/20 transition-colors cursor-default">
-                                <div className="w-full h-40 mb-3 rounded-lg overflow-hidden bg-white/5 relative group-hover:scale-105 transition-transform duration-300">
-                                    <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
-                                </div>
-                                <span className="text-lg font-semibold text-white text-center whitespace-normal">{product.name}</span>
-                            </div>
-                        ))}
+    <div className="relative w-full overflow-hidden mb-10">
+        <div className="flex space-x-8 animate-marquee-reverse whitespace-nowrap">
+            {[...productsList, ...productsList].map((product, index) => (
+                <div 
+                    key={`${product.id}-${index}`} 
+                    className="inline-flex flex-col items-center w-64 flex-shrink-0"
+                >
+                    <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors flex items-center justify-center p-2">
+                        <img 
+                            src={product.image} 
+                            alt={product.name} 
+                            className="w-full h-full object-contain"
+                        />
                     </div>
+                    <span className="text-lg font-semibold text-white text-center whitespace-normal px-2">
+                        {product.name}
+                    </span>
                 </div>
+            ))}
+        </div>
+    </div>
 
-                <div className="text-center">
-                    <Link to="/products" className="btn-primary inline-flex items-center space-x-2">
-                        <span>{t.products.viewDetails}</span>
-                        <ArrowRight className="w-5 h-5" />
-                    </Link>
-                </div>
-            </section>
+    <div className="text-center">
+        <Link to="/products" className="btn-primary inline-flex items-center space-x-2">
+            <span>{t.products.viewDetails}</span>
+            <ArrowRight className="w-5 h-5" />
+        </Link>
+    </div>
+</section>
 
             {/* Services Quick Cards */}
             <section className="section-padding">

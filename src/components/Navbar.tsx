@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
     ];
 
     const handleBrochureClick = () => {
-        window.open('/brochure.pdf', '_blank');
+        window.open('/images/ph-brochure.pdf', '_blank');
     };
 
     const toggleLanguage = () => {
@@ -61,19 +61,13 @@ const Navbar: React.FC = () => {
             >
                 <div className="container-custom">
                     <div className="flex items-center justify-between h-20">
-                        {/* Logo */}
+                        {/* Logo - Updated for WebP */}
                         <Link to="/" className="flex items-center space-x-3 group">
-                            <div className="w-12 h-12 bg-gradient-to-br from-industrial-blue-500 to-industrial-steel-500 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                                <span className="text-white font-bold text-xl">PH</span>
-                            </div>
-                            <div className="hidden sm:block">
-                                <h1 className="text-xl font-bold text-industrial-slate-900">
-                                    Pacific Hitech
-                                </h1>
-                                <p className="text-xs text-industrial-slate-600">
-                                    {t.footer.tagline}
-                                </p>
-                            </div>
+                            <img
+                                src="/images/ph-logo.webp"
+                                alt="Pacific Hitech Logo"
+                                className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                            />
                         </Link>
 
                         {/* Desktop Navigation */}

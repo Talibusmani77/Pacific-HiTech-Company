@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
     ];
 
     const handleBrochureClick = () => {
-        window.open('/brochure.pdf', '_blank');
+        window.open('/images/ph-brochure.pdf', '_blank');
     };
 
     return (
@@ -29,18 +29,15 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     {/* Column 1: Logo & About */}
                     <div>
-                        <div className="flex items-center space-x-3 mb-4">
-                            <div className="w-12 h-12 bg-gradient-to-br from-industrial-blue-500 to-industrial-steel-500 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">PH</span>
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold">Pacific Hitech</h3>
-                                <p className="text-sm text-industrial-slate-400">
-                                    Engineering Excellence
-                                </p>
-                            </div>
-                        </div>
-                        <p className="text-industrial-slate-300 text-sm leading-relaxed">
+                        {/* Logo */}
+                        <Link to="/" className="flex items-center space-x-3 group">
+                            <img
+                                src="/images/ph-logo.webp"
+                                alt="Pacific Hitech Logo"
+                                className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                            />
+                        </Link>
+                        <p className="text-industrial-slate-300 text-sm leading-relaxed pt-5">
                             {t.footer.description}
                         </p>
                     </div>
@@ -82,27 +79,36 @@ const Footer: React.FC = () => {
                                 {officeContacts.india.name}
                             </h4>
                             <ul className="space-y-2 text-sm text-industrial-slate-300">
-                                <li className="flex items-start space-x-2">
-                                    <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                                    <div>
-                                        <div>{officeContacts.india.tel}</div>
-                                        <div>{officeContacts.india.mobile}</div>
-                                    </div>
-                                </li>
-                                <li className="flex items-start space-x-2">
-                                    <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                                    <a
-                                        href={`mailto:${officeContacts.india.email}`}
-                                        className="hover:text-industrial-blue-400 transition-colors duration-200"
-                                    >
-                                        {officeContacts.india.email}
-                                    </a>
-                                </li>
-                                <li className="flex items-start space-x-2">
-                                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                                    <span>{officeContacts.india.address}</span>
-                                </li>
-                            </ul>
+    <li className="flex items-start space-x-2">
+        <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
+        <div>
+            <div>{officeContacts.india.tel}</div>
+            <div>{officeContacts.india.mobile}</div>
+        </div>
+    </li>
+    <li className="flex items-start space-x-2">
+        <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
+        <a
+            href={`mailto:${officeContacts.india.email}`}
+            className="hover:text-industrial-blue-400 transition-colors duration-200"
+        >
+            {officeContacts.india.email}
+        </a>
+    </li>
+    <li className="flex items-start space-x-2">
+        <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
+        <a
+            href={`mailto:${officeContacts.saudi.email}`}
+            className="hover:text-industrial-blue-400 transition-colors duration-200"
+        >
+            {officeContacts.saudi.email}
+        </a>
+    </li>
+    <li className="flex items-start space-x-2">
+        <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+        <span>{officeContacts.india.address}</span>
+    </li>
+</ul>
                         </div>
 
                         {/* Saudi Arabia Office */}

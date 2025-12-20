@@ -22,7 +22,7 @@ const MiniNavbar: React.FC = () => {
                         className="flex items-center space-x-2 text-industrial-slate-300 hover:text-white transition-colors group"
                     >
                         <Mail className="w-4 h-4 text-industrial-blue-400 group-hover:text-cta-blue transition-colors" />
-                        <span>{t.miniNav.email} {contact.email}</span>
+                        <span>{t.miniNav.email} {officeContacts.saudi.email}</span>
                     </a>
                     <a
                         href={`tel:${contact.tel}`}

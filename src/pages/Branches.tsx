@@ -43,6 +43,11 @@ const Branches: React.FC = () => {
         }
     }, [location]);
 
+    // Function to handle map click
+    const handleMapClick = (directionsUrl: string) => {
+        window.open(directionsUrl, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <div className="min-h-screen">
             {/* Top Carousel */}
@@ -139,7 +144,7 @@ const Branches: React.FC = () => {
                                     </div>
 
                                     <a
-                                        href={officeContacts.india.mapUrl}
+                                        href={officeContacts.india.directionsUrl || officeContacts.india.mapUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="btn-primary inline-flex items-center space-x-2 mt-4"
@@ -150,18 +155,29 @@ const Branches: React.FC = () => {
                                 </div>
                             </div>
 
-                            {/* Map */}
-                            <div className="h-[500px] lg:h-auto">
+                            {/* Map - Now Clickable */}
+                            <div 
+                                className="h-[500px] lg:h-auto relative cursor-pointer group"
+                                onClick={() => handleMapClick(officeContacts.india.directionsUrl || officeContacts.india.mapUrl)}
+                            >
                                 <iframe
-                                    src={officeContacts.india.mapUrl}
+                                    src={officeContacts.india.embedUrl || officeContacts.india.mapUrl}
                                     width="100%"
                                     height="100%"
-                                    style={{ border: 0 }}
+                                    style={{ border: 0, pointerEvents: 'none' }}
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                     title="India Office Location"
                                 />
+                                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white px-6 py-3 rounded-full shadow-lg">
+                                        <span className="text-industrial-blue-600 font-semibold flex items-center space-x-2">
+                                            <Navigation className="w-5 h-5" />
+                                            <span>Click for Directions</span>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
@@ -179,18 +195,29 @@ const Branches: React.FC = () => {
                         className="bg-white rounded-2xl shadow-xl overflow-hidden"
                     >
                         <div className="grid grid-cols-1 lg:grid-cols-2">
-                            {/* Map */}
-                            <div className="h-[500px] lg:h-auto order-2 lg:order-1">
+                            {/* Map - Now Clickable */}
+                            <div 
+                                className="h-[500px] lg:h-auto order-2 lg:order-1 relative cursor-pointer group"
+                                onClick={() => handleMapClick(officeContacts.saudi.directionsUrl || officeContacts.saudi.mapUrl)}
+                            >
                                 <iframe
-                                    src={officeContacts.saudi.mapUrl}
+                                    src={officeContacts.saudi.embedUrl || officeContacts.saudi.mapUrl}
                                     width="100%"
                                     height="100%"
-                                    style={{ border: 0 }}
+                                    style={{ border: 0, pointerEvents: 'none' }}
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                     title="Saudi Arabia Office Location"
                                 />
+                                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white px-6 py-3 rounded-full shadow-lg">
+                                        <span className="text-industrial-blue-600 font-semibold flex items-center space-x-2">
+                                            <Navigation className="w-5 h-5" />
+                                            <span>Click for Directions</span>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Contact Info */}
@@ -252,7 +279,7 @@ const Branches: React.FC = () => {
                                     </div>
 
                                     <a
-                                        href={officeContacts.saudi.mapUrl}
+                                        href={officeContacts.saudi.directionsUrl || officeContacts.saudi.mapUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="btn-primary inline-flex items-center space-x-2 mt-4"

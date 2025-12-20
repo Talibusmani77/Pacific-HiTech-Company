@@ -1,21 +1,25 @@
 // Office Contact Information - Saudi Arabia First
 export const officeContacts = {
-    saudi: {
-        name: "Saudi Arabia — Branch Office",
-        tel: "+966 11 292 1187",
-        mobile: "+966 56 172 7061",
-        email: "info.ksa@phitechgroup.com",
-        address: "6987, Ali Bin Abi Talib Rd, Jareer District, Riyadh - 12837, Saudi Arabia",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.0!2d46.7!3d24.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzAwLjAiTiA0NsKwNDInMDAuMCJF!5e0!3m2!1sen!2ssa!4v1234567890"
-    },
-    india: {
-        name: "India — Head Office",
-        tel: "+91 912 941 6070",
-        mobile: "+91 989 794 7864",
-        email: "info@phitechgroup.com",
-        address: "125A, Noor Nagar Extn, Jamia Nagar, New Delhi - 110025, India",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0!2d77.2!3d28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMwJzAwLjAiTiA3N8KwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-    }
+   saudi: {
+    name: "Saudi Arabia — Branch Office",
+    tel: "+966 11 292 1187",
+    mobile: "+966 56 172 7061",
+    email: "info.ksa@phitechgroup.com",
+    address: "6987, Ali Bin Abi Talib Rd, Jareer District, Riyadh - 12837, Saudi Arabia",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.0!2d46.7!3d24.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzAwLjAiTiA0NsKwNDInMDAuMCJF!5e0!3m2!1sen!2ssa!4v1234567890",
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=6987+Ali+Bin+Abi+Talib+Rd+Jareer+District+Riyadh+12837+Saudi+Arabia",
+    mapUrl: "https://www.google.com/maps/dir/?api=1&destination=6987+Ali+Bin+Abi+Talib+Rd+Jareer+District+Riyadh+12837+Saudi+Arabia" // Fallback
+},
+india: {
+    name: "India — Head Office",
+    tel: "+91 912 941 6070",
+    mobile: "+91 989 794 7864",
+    email: "info@phitechgroup.com",
+    address: "125A, Noor Nagar Extn, Jamia Nagar, New Delhi - 110025, India",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0!2d77.2!3d28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMwJzAwLjAiTiA3N8KwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890",
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=125A+Noor+Nagar+Extn+Jamia+Nagar+New+Delhi+110025+India",
+    mapUrl: "https://www.google.com/maps/dir/?api=1&destination=125A+Noor+Nagar+Extn+Jamia+Nagar+New+Delhi+110025+India" // Fallback
+}
 };
 
 // Company Stats
@@ -30,49 +34,127 @@ export const productsList = [
         id: 1,
         name: "Industrial Valves",
         description: "High-pressure valves for oil & gas applications",
-        image: "/images/products/product-1.jpg"
+        image: "/images/products/p-1.webp"
     },
     {
         id: 2,
         name: "Pipe Fittings",
         description: "Seamless and welded pipe fittings",
-        image: "/images/products/product-2.jpg"
+        image: "/images/products/p-2.webp"
     },
     {
         id: 3,
         name: "Fasteners",
         description: "Industrial strength bolts, nuts, and screws",
-        image: "/images/products/product-3.jpg"
+        image: "/images/products/p-3.webp"
     },
     {
         id: 4,
         name: "Gaskets",
         description: "Spiral wound and ring joint gaskets",
-        image: "/images/products/product-4.jpg"
+        image: "/images/products/p-4.webp"
     },
     {
         id: 5,
         name: "Flanges",
         description: "Forged steel flanges in various pressure ratings",
-        image: "/images/products/product-5.jpg"
+        image: "/images/products/p-5.webp"
     },
     {
         id: 6,
         name: "Instrumentation",
         description: "Precision measuring and control instruments",
-        image: "/images/products/product-6.jpg"
+        image: "/images/products/p-6.webp"
     },
     {
         id: 7,
         name: "Hydraulic Hoses",
         description: "High-pressure hydraulic hoses and assemblies",
-        image: "/images/products/product-7.jpg"
+        image: "/images/products/p-7.webp"
     },
     {
         id: 8,
         name: "Safety Equipment",
         description: "PPE and industrial safety gear",
-        image: "/images/products/product-8.jpg"
+        image: "/images/products/p-8.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-9.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-10.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-11.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-12.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-13.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-14.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-15.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-16.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-17.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-18.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-19.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-20.webp"
+    },
+    {
+        id: 8,
+        name: "Safety Equipment",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-21.webp"
     }
 ];
 
@@ -82,42 +164,42 @@ export const serviceCards = [
         id: 1,
         title: "Steel Fabrication",
         description: "Heavy-duty structural steel fabrication with precision welding and assembly.",
-        image: "/images/services/service-1.jpg",
+        image: "/images/services/steel.webp",
         icon: "Wrench"
     },
     {
         id: 2,
         title: "Construction Support",
         description: "Comprehensive construction support services for industrial projects.",
-        image: "/images/services/service-2.jpg",
+        image: "/images/services/support.webp",
         icon: "HardHat"
     },
     {
         id: 3,
         title: "Precision Cutting",
         description: "Advanced laser and CNC cutting for complex geometries and tight tolerances.",
-        image: "/images/services/service-3.jpg",
+        image: "/images/services/cut.webp",
         icon: "Zap"
     },
     {
         id: 4,
         title: "Custom Design Fabrication",
         description: "CAD-driven custom fabrication using AutoCAD and SolidWorks.",
-        image: "/images/services/service-4.jpg",
+        image: "/images/services/custom.webp",
         icon: "Pencil"
     },
     {
         id: 5,
         title: "High-End Machinery",
         description: "State-of-the-art equipment for precision manufacturing and fabrication.",
-        image: "/images/services/service-5.jpg",
+        image: "/images/services/machines.webp",
         icon: "Cog"
     },
     {
         id: 6,
         title: "Trading & Equipment Services",
         description: "Equipment supply, trading, and technical support services.",
-        image: "/images/services/service-6.jpg",
+        image: "/images/services/trading.webp",
         icon: "Package"
     }
 ];
@@ -386,7 +468,7 @@ export const projectsData = [
         title: "Industrial Steel Structure",
         category: "Fabrication",
         description: "Large-scale structural steel fabrication for industrial facility",
-        image: "/images/projects/project-1.jpg",
+        image: "/images/projects/pro1.webp",
         tags: ["Fabrication", "Structural"]
     },
     {
@@ -394,7 +476,7 @@ export const projectsData = [
         title: "Precision Laser Cutting",
         category: "Laser",
         description: "Complex laser cutting project with tight tolerances",
-        image: "/images/projects/project-2.jpg",
+        image: "/images/projects/pro2.webp",
         tags: ["Laser", "Precision"]
     },
     {
@@ -402,7 +484,7 @@ export const projectsData = [
         title: "CNC Machined Components",
         category: "Machining",
         description: "High-precision CNC machined parts for automotive industry",
-        image: "/images/projects/project-3.jpg",
+        image: "/images/projects/pro3.webp",
         tags: ["Machining", "CNC"]
     },
     {
@@ -410,7 +492,7 @@ export const projectsData = [
         title: "HVAC Ductwork System",
         category: "Ductwork",
         description: "Complete HVAC duct fabrication and installation",
-        image: "/images/projects/project-4.jpg",
+        image: "/images/projects/pro4.webp",
         tags: ["Ductwork", "HVAC"]
     },
     {
@@ -418,7 +500,7 @@ export const projectsData = [
         title: "Pipe Support Installation",
         category: "Piping",
         description: "Industrial pipe support system design and installation",
-        image: "/images/projects/project-5.jpg",
+        image: "/images/projects/pro5.webp",
         tags: ["Piping", "Support"]
     },
     {
@@ -426,7 +508,111 @@ export const projectsData = [
         title: "Cable Tray System",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
-        image: "/images/projects/project-6.jpg",
+        image: "/images/projects/pro6.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro7.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro8.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro9.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro10.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro11.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro12.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro13.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro14.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro15.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro16.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro17.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro18.webp",
+        tags: ["Cable Tray", "Installation"]
+    },
+    {
+        id: 6,
+        title: "Cable Tray System",
+        category: "Cable Tray",
+        description: "Engineered cable tray and ladder system for facility",
+        image: "/images/projects/pro19.webp",
         tags: ["Cable Tray", "Installation"]
     }
 ];
@@ -435,25 +621,25 @@ export const projectsData = [
 export const heroSlides = [
     {
         id: 1,
-        image: "/images/hero/steel-fabrication.jpg",
+        image: "/images/hero/hero-1.webp",
         caption: "Precision Steel Fabrication",
         description: "World-class structural steel fabrication services"
     },
     {
         id: 2,
-        image: "/images/hero/laser-cutting.jpg",
+        image: "/images/hero/hero-2.webp",
         caption: "Advanced Laser Cutting",
         description: "High-precision laser cutting with minimal thermal distortion"
     },
     {
         id: 3,
-        image: "/images/hero/cnc-machining.jpg",
+        image: "/images/hero/hero-3.webp",
         caption: "CNC Machining Excellence",
         description: "State-of-the-art CNC machining for complex components"
     },
     {
         id: 4,
-        image: "/images/hero/construction.jpg",
+        image: "/images/hero/hero-4.webp",
         caption: "On-Site Construction Support",
         description: "Comprehensive construction and installation services"
     }
