@@ -154,7 +154,7 @@ const Branches: React.FC = () => {
                                             <span>{t.branches.getDirections}</span>
                                         </a>
                                         <button
-                                            onClick={() => window.open('/images/ph-brochure.pdf', '_blank')}
+                                            onClick={() => window.open('/images/ph-brochure2.pdf', '_blank')}
                                             className="btn-primary inline-flex items-center space-x-2"
                                         >
                                             <FileText className="w-5 h-5" />

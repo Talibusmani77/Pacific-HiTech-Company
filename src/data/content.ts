@@ -371,37 +371,37 @@ export const expertiseSections = [
 export const equipmentList = [
     {
         id: 1,
-        name: "Sunrise Hydraulic",
+        name: "Sunrise Hydraulic Press",
         category: "Hydraulic Press",
         specs: ["High-pressure capacity", "Precision control", "Heavy-duty construction"],
-        image: "/images/equipment/equipment-1.jpg",
+        image: "/images/equipment/e1.webp",
         fullDescription: "The Sunrise Hydraulic Press is a versatile machine designed for high-capacity industrial applications. It offers uniform pressure distribution, making it ideal for bending, forming, and punching operations with exceptional accuracy.",
         features: ["Automatic pressure control", "Overload protection", "Energy-efficient hydraulic system"]
     },
     {
         id: 2,
-        name: "DURMA",
+        name: "Durma Press Brake",
         category: "Press Brake",
         specs: ["CNC controlled", "Multi-axis bending", "High accuracy"],
-        image: "/images/equipment/equipment-2.jpg",
+        image: "/images/equipment/e2.webp",
         fullDescription: "DURMA Press Brakes are known for their precision and reliability. Equipped with advanced CNC controls, this machine ensures accurate bending angles and consistent repeatability for complex sheet metal parts.",
         features: ["User-friendly CNC interface", "High-speed back gauge", "Automatic crowning system"]
     },
     {
         id: 3,
-        name: "Baykal",
+        name: "Baykal Shearing Machine",
         category: "Shearing Machine",
         specs: ["Hydraulic guillotine", "Thick plate cutting", "Precision shearing"],
-        image: "/images/equipment/equipment-3.jpg",
+        image: "/images/equipment/e3.webp",
         fullDescription: "The Baykal Hydraulic Guillotine Shear delivers clean and straight cuts on various metal thicknesses. Its robust construction minimizes vibration, ensuring high-quality shearing for heavy-duty production.",
         features: ["Adjustable blade gap", "Swing beam design", "Digital cutting angle adjustment"]
     },
     {
         id: 4,
-        name: "BST",
+        name: "BST Plate Rolling",
         category: "Plate Rolling",
         specs: ["3-roll design", "Large diameter capacity", "Heavy gauge rolling"],
-        image: "/images/equipment/equipment-4.jpg",
+        image: "/images/equipment/e4.webp",
         fullDescription: "Our BST Plate Rolling machine features a powerful 3-roll system capable of rolling heavy plates into precise cylinders and cones. Ideally suited for pressure vessel and tank fabrication.",
         features: ["Hydraulic roll positioning", "Drop-end for easy removal", "Induction hardened rolls"]
     },
@@ -410,52 +410,61 @@ export const equipmentList = [
         name: "Q35Y Hydraulic Iron Worker",
         category: "Multi-function",
         specs: ["Punching", "Shearing", "Notching capabilities"],
-        image: "/images/equipment/equipment-5.jpg",
+        image: "/images/equipment/e5.webp",
         fullDescription: "The Q35Y Industrial Iron Worker is a multi-functional powerhouse. It combines punching, shearing, and notching stations in one unit, significantly improving workshop efficiency and versatility.",
         features: ["Dual-operator capability", "Adjustable stroke", "Quick-change tooling system"]
     },
     {
         id: 6,
-        name: "ESTUN E21S Hydraulic Guillotine",
+        name: "Hydraulic Guillotine",
         category: "Shearing",
         specs: ["CNC control", "High precision", "Safety features"],
-        image: "/images/equipment/equipment-6.jpg",
+        image: "/images/equipment/e6.webp",
         fullDescription: "Featuring the ESTUN E21S CNC controller, this hydraulic guillotine offers programmable back-gauge positioning for high-speed, repetitive cutting tasks with superior accuracy.",
         features: ["E21S CNC System", "Ball screw back gauge", "Motorized blade adjustment"]
     },
     {
         id: 7,
-        name: "English CNC ZR41 Press Brake",
+        name: "Lazer Cutting",
         category: "Press Brake",
         specs: ["CNC controlled", "Precision bending", "Multi-axis"],
-        image: "/images/equipment/equipment-7.jpg",
+        image: "/images/equipment/e7.webp",
         fullDescription: "The CNC ZR41 Press Brake brings English engineering precision to our shop floor. It is designed for intricate bending operations, ensuring tight tolerances for critical components.",
         features: ["Advanced synchronisation", "Deep throat depth", "Fast approach and return speeds"]
     },
     {
         id: 8,
-        name: "W11S 3-Roll Plate Roller",
+        name: "Duct Lock Former",
         category: "Plate Rolling",
         specs: ["Symmetric rolling", "Large capacity", "Pre-bending capability"],
-        image: "/images/equipment/equipment-8.jpg",
+        image: "/images/equipment/e8.webp",
         fullDescription: "The W11S Universal Plate Rolling Machine with pre-bending capability ensures high-precision rolling with minimal flat ends. It is essential for producing high-quality cylindrical and conical parts.",
         features: ["Upper roll universal movement", "PLC control system", "Hydraulic drive"]
     },
     {
         id: 9,
-        name: "Pneumatic Open Front Press",
+        name: "CNC ZR41 Press Brake",
         category: "Press",
         specs: ["Fast operation", "Precision stamping", "Versatile tooling"],
-        image: "/images/equipment/equipment-9.jpg",
+        image: "/images/equipment/e9.webp",
         fullDescription: "This Pneumatic Open Front Press provides high-speed stamping and forming capabilities. It allows for easy access to the die area, making it suitable for a wide range of sheet metal operations.",
         features: ["Pneumatic clutch and brake", "Adjustable slide", "Safety light curtains"]
     },
     {
         id: 10,
-        name: "Duct Lock Former",
+        name: "W11S-3 Roll Plate Roller",
         category: "Duct Fabrication",
         specs: ["Automated forming", "Consistent quality", "High-speed production"],
-        image: "/images/equipment/equipment-10.jpg",
+        image: "/images/equipment/e10.webp",
+        fullDescription: "The Duct Lock Former is specialized for HVAC duct manufacturing using Pittsburgh lock seams. It ensures airtight and durable joints for high-quality ductwork systems.",
+        features: ["Quiet operation", "Multiple seam profiles", "Heavy-duty gear transmission"]
+    },
+    {
+        id: 11,
+        name: "Pmeumatic Open Front Press",
+        category: "Duct Fabrication",
+        specs: ["Automated forming", "Consistent quality", "High-speed production"],
+        image: "/images/equipment/e11.webp",
         fullDescription: "The Duct Lock Former is specialized for HVAC duct manufacturing using Pittsburgh lock seams. It ensures airtight and durable joints for high-quality ductwork systems.",
         features: ["Quiet operation", "Multiple seam profiles", "Heavy-duty gear transmission"]
     }
@@ -635,4 +644,39 @@ export const heroSlides = [
         caption: "On-Site Construction Support",
         description: "Comprehensive construction and installation services"
     }
+];
+
+// Clients List
+export const clientsList = [
+    { id: 1, name: "Client 1", image: "/images/clients/cl1.jpeg" },
+    { id: 2, name: "Client 2", image: "/images/clients/cl2.jpeg" },
+    { id: 3, name: "Client 3", image: "/images/clients/cl3.jpeg" },
+    { id: 4, name: "Client 4", image: "/images/clients/cl4.jpeg" },
+    { id: 5, name: "Client 5", image: "/images/clients/cl5.jpeg" },
+    { id: 6, name: "Client 6", image: "/images/clients/cl6.jpeg" },
+    { id: 7, name: "Client 7", image: "/images/clients/cl7.jpeg" },
+    { id: 8, name: "Client 8", image: "/images/clients/cl8.jpeg" },
+    { id: 9, name: "Client 8", image: "/images/clients/cl9.jpeg" },
+    { id: 10, name: "Client 8", image: "/images/clients/cl10.jpeg" },
+    { id: 11, name: "Client 8", image: "/images/clients/cl11.jpeg" },
+    { id: 12, name: "Client 8", image: "/images/clients/cl12.jpeg" },
+    { id: 13, name: "Client 8", image: "/images/clients/cl13.jpeg" },
+{ id: 14, name: "Client 8", image: "/images/clients/cl14.jpeg" },
+{ id: 15, name: "Client 8", image: "/images/clients/cl15.jpeg" },
+{ id: 16, name: "Client 8", image: "/images/clients/cl16.jpeg" },
+{ id: 17, name: "Client 8", image: "/images/clients/cl17.jpeg" },
+{ id: 18, name: "Client 8", image: "/images/clients/cl18.jpeg" },
+{ id: 19, name: "Client 8", image: "/images/clients/cl19.jpeg" },
+{ id: 20, name: "Client 8", image: "/images/clients/cl20.jpeg" },
+{ id: 21, name: "Client 8", image: "/images/clients/cl21.jpeg" },
+{ id: 22, name: "Client 8", image: "/images/clients/cl22.jpeg" },
+{ id: 23, name: "Client 8", image: "/images/clients/cl23.jpeg" },
+{ id: 24, name: "Client 8", image: "/images/clients/cl24.jpeg" },
+{ id: 25, name: "Client 8", image: "/images/clients/cl25.jpeg" },
+{ id: 26, name: "Client 8", image: "/images/clients/cl26.jpeg" },
+{ id: 27, name: "Client 8", image: "/images/clients/cl27.jpeg" },
+{ id: 28, name: "Client 8", image: "/images/clients/cl28.jpeg" },
+{ id: 29, name: "Client 8", image: "/images/clients/cl29.jpeg" },
+{ id: 30, name: "Client 8", image: "/images/clients/cl30.jpeg" },
+
 ];

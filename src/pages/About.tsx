@@ -1,4 +1,4 @@
-import { companyStats, whyChooseUs } from '@/data/content';
+import { companyStats, whyChooseUs, clientsList } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Globe, Users } from 'lucide-react';
@@ -100,16 +100,20 @@ const About: React.FC = () => {
                 </div>
             </section>
 
-            {/* Clients Marquee */}
+            {/* Clients Grid */}
             <section className="py-16 bg-white border-y border-industrial-slate-100 overflow-hidden">
                 <div className="container-custom mb-10 text-center">
                     <h2 className="text-2xl font-bold text-industrial-slate-900 mb-2">{t.about.clientsTitle}</h2>
                 </div>
-                <div className="relative w-full overflow-hidden">
-                    <div className="flex space-x-12 animate-marquee whitespace-nowrap">
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8].map((i, index) => (
-                            <div key={index} className="inline-block w-40 h-24 bg-industrial-slate-50 rounded-lg flex items-center justify-center border border-industrial-slate-200">
-                                <span className="text-industrial-slate-400 font-bold">Client Logo {i}</span>
+                <div className="container-custom">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+                        {clientsList.map((client) => (
+                            <div key={client.id} className="flex items-center justify-center p-4 bg-white rounded-lg border border-industrial-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                <img
+                                    src={client.image}
+                                    alt={client.name}
+                                    className="max-h-20 w-auto object-contain"
+                                />
                             </div>
                         ))}
                     </div>

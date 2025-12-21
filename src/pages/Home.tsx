@@ -1,5 +1,5 @@
 import AnimatedCarousel from '@/components/AnimatedCarousel';
-import { heroSlides, productsList, projectsData, serviceCards, whyChooseUs } from '@/data/content';
+import { heroSlides, productsList, projectsData, serviceCards, whyChooseUs, clientsList } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
 import { motion } from 'framer-motion';
 import * as Icons from 'lucide-react';
@@ -126,45 +126,45 @@ const Home: React.FC = () => {
             </section>
 
             {/* Products Range Section - Auto Scrolling Marquee */}
-           <section className="py-16 bg-industrial-slate-900 text-white overflow-hidden">
-    <div className="container-custom mb-8 text-center">
-        <h3 className="text-2xl font-bold mb-2">
-            {t.products.title}
-        </h3>
-        <p className="text-white/70 mb-8">
-            {t.products.subtitle}
-        </p>
-    </div>
-
-    <div className="relative w-full overflow-hidden mb-10">
-        <div className="flex space-x-8 animate-marquee-reverse whitespace-nowrap">
-            {[...productsList, ...productsList].map((product, index) => (
-                <div 
-                    key={`${product.id}-${index}`} 
-                    className="inline-flex flex-col items-center w-64 flex-shrink-0"
-                >
-                    <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors flex items-center justify-center p-2">
-                        <img 
-                            src={product.image} 
-                            alt={product.name} 
-                            className="w-full h-full object-contain"
-                        />
-                    </div>
-                    <span className="text-lg font-semibold text-white text-center whitespace-normal px-2">
-                        {product.name}
-                    </span>
+            <section className="py-16 bg-industrial-slate-900 text-white overflow-hidden">
+                <div className="container-custom mb-8 text-center">
+                    <h3 className="text-2xl font-bold mb-2">
+                        {t.products.title}
+                    </h3>
+                    <p className="text-white/70 mb-8">
+                        {t.products.subtitle}
+                    </p>
                 </div>
-            ))}
-        </div>
-    </div>
 
-    <div className="text-center">
-        <Link to="/products" className="btn-primary inline-flex items-center space-x-2">
-            <span>{t.products.viewDetails}</span>
-            <ArrowRight className="w-5 h-5" />
-        </Link>
-    </div>
-</section>
+                <div className="relative w-full overflow-hidden mb-10">
+                    <div className="flex space-x-8 animate-marquee-reverse whitespace-nowrap">
+                        {[...productsList, ...productsList].map((product, index) => (
+                            <div
+                                key={`${product.id}-${index}`}
+                                className="inline-flex flex-col items-center w-64 flex-shrink-0"
+                            >
+                                <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors flex items-center justify-center p-2">
+                                    <img
+                                        src={product.image}
+                                        alt={product.name}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
+                                <span className="text-lg font-semibold text-white text-center whitespace-normal px-2">
+                                    {product.name}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="text-center">
+                    <Link to="/products" className="btn-primary inline-flex items-center space-x-2">
+                        <span>{t.products.viewDetails}</span>
+                        <ArrowRight className="w-5 h-5" />
+                    </Link>
+                </div>
+            </section>
 
             {/* Services Quick Cards */}
             <section className="section-padding">
@@ -265,11 +265,11 @@ const Home: React.FC = () => {
 
                 <div className="relative w-full overflow-hidden">
                     <div className="flex space-x-12 animate-marquee whitespace-nowrap items-center">
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8].map((i, index) => (
-                            <div key={index} className="inline-block w-40 h-24 flex-shrink-0 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
+                        {[...clientsList, ...clientsList].map((client, index) => (
+                            <div key={`${client.id}-${index}`} className="inline-block w-40 h-24 flex-shrink-0 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
                                 <img
-                                    src={`https://placehold.co/160x96/f1f5f9/94a3b8?text=Client+Logo+${i}`}
-                                    alt={`Client ${i}`}
+                                    src={client.image}
+                                    alt={client.name}
                                     className="w-full h-full object-contain mix-blend-multiply"
                                 />
                             </div>

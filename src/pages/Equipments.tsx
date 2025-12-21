@@ -55,33 +55,33 @@ const Equipments: React.FC = () => {
                     {/* Equipment Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {equipmentList.map((equipment, index) => (
-                            <motion.div
-                                key={equipment.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="card group"
-                            >
-                                {/* Image */}
-                                <div className="relative h-56 overflow-hidden">
-                                    <img
-                                        src={equipment.image}
-                                        alt={equipment.name}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-industrial-slate-900/80 to-transparent" />
-
-                                </div>
-
-                                {/* Content */}
-                                <div className="p-6">
-                                    <h3 className="text-h3 font-bold text-industrial-slate-900 mb-3 text-center">
-                                        {equipment.name}
-                                    </h3>
-                                </div>
-                            </motion.div>
-                        ))}
+    <motion.div
+        key={equipment.id}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="group"
+    >
+        {/* Image Container with Fixed Aspect Ratio */}
+        <div className="relative overflow-hidden bg-gray-100">
+            <div className="aspect-square w-full">
+                <img
+                    src={equipment.image}
+                    alt={equipment.name}
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                />
+            </div>
+            
+            {/* Name Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent py-6 px-4">
+                <h3 className="text-xl md:text-2xl font-bold text-white text-center tracking-wide">
+                    {equipment.name}
+                </h3>
+            </div>
+        </div>
+    </motion.div>
+))}
                     </div>
                 </div>
             </section>
