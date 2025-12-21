@@ -596,14 +596,6 @@ export const projectsData = [
         title: "Cable Tray System",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
-        image: "/images/projects/pro17.webp",
-        tags: ["Cable Tray", "Installation"]
-    },
-    {
-        id: 6,
-        title: "Cable Tray System",
-        category: "Cable Tray",
-        description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro18.webp",
         tags: ["Cable Tray", "Installation"]
     },
