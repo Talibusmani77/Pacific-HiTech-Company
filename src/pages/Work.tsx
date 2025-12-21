@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import AnimatedCarousel from '@/components/AnimatedCarousel';
 import Lightbox from '@/components/Lightbox';
 import { projectsData } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
+import { motion } from 'framer-motion';
 import { Filter } from 'lucide-react';
+import React, { useState } from 'react';
 
 const workCarouselSlides = [
     {
         id: 1,
-        image: '/images/work/carousel-1.jpg',
+        image: '/images/work/project.webp',
         caption: 'Project Excellence',
         description: 'Delivering complex industrial projects on time',
     },
     {
         id: 2,
-        image: '/images/work/carousel-2.jpg',
+        image: '/images/work/quality.webp',
         caption: 'Quality Craftsmanship',
         description: 'Precision and attention to detail in every project',
     },
     {
         id: 3,
-        image: '/images/work/carousel-3.jpg',
+        image: '/images/work/client.webp',
         caption: 'Client Satisfaction',
         description: 'Building long-term partnerships through excellence',
     },

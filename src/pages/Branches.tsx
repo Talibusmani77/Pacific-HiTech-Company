@@ -9,19 +9,19 @@ import { Phone, Mail, MapPin, Navigation } from 'lucide-react';
 const branchesCarouselSlides = [
     {
         id: 1,
-        image: '/images/branches/carousel-1.jpg',
+        image: '/images/branches/global.webp',
         caption: 'Global Presence',
         description: 'Serving clients across India and the Middle East',
     },
     {
         id: 2,
-        image: '/images/branches/carousel-2.jpg',
+        image: '/images/branches/india.webp',
         caption: 'India Head Office',
         description: 'Located in New Delhi, India',
     },
     {
         id: 3,
-        image: '/images/branches/carousel-3.jpg',
+        image: '/images/branches/saudi.webp',
         caption: 'Saudi Arabia Branch',
         description: 'Serving the Middle East from Riyadh',
     },

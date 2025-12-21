@@ -32,127 +32,127 @@ export const companyStats = [
 export const productsList = [
     {
         id: 1,
-        name: "Industrial Valves",
+        name: "Cable Tray",
         description: "High-pressure valves for oil & gas applications",
         image: "/images/products/p-1.webp"
     },
     {
         id: 2,
-        name: "Pipe Fittings",
+        name: "Solid Bottom type ",
         description: "Seamless and welded pipe fittings",
         image: "/images/products/p-2.webp"
     },
     {
         id: 3,
-        name: "Fasteners",
+        name: " Leader Cable trey",
         description: "Industrial strength bolts, nuts, and screws",
         image: "/images/products/p-3.webp"
     },
     {
         id: 4,
-        name: "Gaskets",
+        name: "Handrails",
         description: "Spiral wound and ring joint gaskets",
         image: "/images/products/p-4.webp"
     },
     {
         id: 5,
-        name: "Flanges",
+        name: "Tree Grates (Bar Type)",
         description: "Forged steel flanges in various pressure ratings",
         image: "/images/products/p-5.webp"
     },
     {
         id: 6,
-        name: "Instrumentation",
+        name: "Tree Grates (Flat type)",
         description: "Precision measuring and control instruments",
         image: "/images/products/p-6.webp"
     },
     {
         id: 7,
-        name: "Hydraulic Hoses",
+        name: "Twisted bar type",
         description: "High-pressure hydraulic hoses and assemblies",
         image: "/images/products/p-7.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Flat Bar Grating",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-8.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Rectangular Channels ",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-9.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Channel with V bottom",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-10.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: " Round Bottom Channels",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-11.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Slopped Channels",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-12.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Slote Drains",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-13.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Square Gratings",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-14.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Recangular Gratings",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-15.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Manhole Square Covers",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-16.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Rectangular Covers",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-17.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Access Cover with Hydraulics",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-18.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Grease Interceptors",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-19.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Rectangular Duct",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-20.webp"
     },
     {
         id: 8,
-        name: "Safety Equipment",
+        name: "Round Duct",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-21.webp"
     }
@@ -233,7 +233,7 @@ export const expertiseSections = [
         heading: "Heavy Industrial Fabrication",
         subheading: "Precision-driven solutions for all heavy industrial fabrication needs.",
         content: "Capabilities for large structural assemblies, plate welding, heavy beams, outriggers, structural frames and more. We combine heavy-duty machinery and certified welding procedures to meet industrial standards.",
-        image: "/images/expertise/expertise-1.jpg",
+        image: "/images/expertise/heavy.webp",
         direction: "left"
     },
     {
@@ -241,7 +241,7 @@ export const expertiseSections = [
         heading: "Sheet Metal Fabrication",
         subheading: "High-precision sheet metal fabrication for diverse industrial applications.",
         content: "Forming, shearing, bending, punching — tight tolerances for HVAC ductwork, enclosures, panels, covers. AutoCAD → shop floor workflow.",
-        image: "/images/expertise/expertise-2.jpg",
+        image: "/images/expertise/sheet.webp",
         direction: "right"
     },
     {
@@ -249,7 +249,7 @@ export const expertiseSections = [
         heading: "Castings & Forgings",
         subheading: "Custom castings and forgings for manufacturing and industrial projects.",
         content: "Coordinate castings/forgings production with machining & finishing to deliver ready-to-install components.",
-        image: "/images/expertise/expertise-3.jpg",
+        image: "/images/expertise/casting.webp",
         direction: "left"
     },
     {
@@ -257,7 +257,7 @@ export const expertiseSections = [
         heading: "Cut to Length",
         subheading: "Accurate cut-to-length metal processing for customized requirements.",
         content: "Precision length cutting for plates and coils, with tight tolerance QA.",
-        image: "/images/expertise/expertise-4.jpg",
+        image: "/images/expertise/length.webp",
         direction: "right"
     },
     {
@@ -265,7 +265,7 @@ export const expertiseSections = [
         heading: "Slitting",
         subheading: "Precision metal slitting services for tailored industrial needs.",
         content: "High-quality slitting for coils and sheets for manufacturing feeds.",
-        image: "/images/expertise/expertise-5.jpg",
+        image: "/images/expertise/slitting.webp",
         direction: "left"
     },
     {
@@ -273,7 +273,7 @@ export const expertiseSections = [
         heading: "Shearing, Bending & Rolling",
         subheading: "Professional shearing, bending and rolling services for metal fabrication.",
         content: "Includes plate rolls, angle rolls — rolling cylinders up to 10' long and heavy thicknesses. We have 3 plate rolls and large capacity angle roll, allowing cylinders up to 10' long and 4¾\" thickness; our operators hold tight tolerances.",
-        image: "/images/expertise/expertise-6.jpg",
+        image: "/images/expertise/bend.webp",
         direction: "right",
         highlight: true
     },
@@ -282,7 +282,7 @@ export const expertiseSections = [
         heading: "Laser Cutting & Welding",
         subheading: "Advanced laser cutting and welding services for precision fabrication.",
         content: "High-accuracy laser cutting (minimal thermal distortion) and automated welding stations for consistent quality.",
-        image: "/images/expertise/expertise-7.jpg",
+        image: "/images/expertise/laser.webp",
         direction: "left"
     },
     {
@@ -290,7 +290,7 @@ export const expertiseSections = [
         heading: "CNC Machining & Job Works",
         subheading: "CNC machining and job work services for efficient metal processing.",
         content: "Turning, milling, drilling, surface grinding — in-house machine shop with lathes, milling, surface grinders and tooling. Reliable job work for custom parts.",
-        image: "/images/expertise/expertise-8.jpg",
+        image: "/images/expertise/cnc-mc.webp",
         direction: "right"
     },
     {
@@ -298,7 +298,7 @@ export const expertiseSections = [
         heading: "Structural Fabrication",
         subheading: "Large structural projects built to exacting drawing tolerances.",
         content: "Our new cutting machine cuts plates, beams, angle and channel to +/- 0.032\" tolerance over 20'. This technology, along with the skill and experience of the fabricators, allows us to build large structural projects exactly as per drawing.",
-        image: "/images/expertise/expertise-9.jpg",
+        image: "/images/expertise/fab.webp",
         direction: "left",
         highlight: true
     },
@@ -307,7 +307,7 @@ export const expertiseSections = [
         heading: "Piping Work",
         subheading: "Expert piping fabrication & support installation.",
         content: "We have an expert team for piping work — all pipe supports and attachment welds follow the same welding procedure as used for the piping class. Temporary supports are used during pipe-work installation to prevent overstressing the pipework.",
-        image: "/images/expertise/expertise-10.jpg",
+        image: "/images/expertise/piping.webp",
         direction: "right",
         highlight: true
     },
@@ -316,7 +316,7 @@ export const expertiseSections = [
         heading: "Heavy Plate Cutting & Piercing",
         subheading: "Oxy-fuel cutting & piercing for heavy plates.",
         content: "Facility for heavy-duty plates via oxy-fuel cutting (up to 75 mm). For thinner plates (up to 6 mm) we cut on shearing machines. We have in-house piercing for multiple diameter holes.",
-        image: "/images/expertise/expertise-11.jpg",
+        image: "/images/expertise/plate.webp",
         direction: "left",
         highlight: true
     },
@@ -325,7 +325,7 @@ export const expertiseSections = [
         heading: "Machining Work",
         subheading: "Full machine-shop capabilities.",
         content: "In-house machining: M1tr Milling, Lathe, Surface Grinder, Power Saw, Press Tool & Die Making, Jig & Fixture making, Tool Sharpening, Boring, Tapping, Sawing, Punching, Bending & Forming.",
-        image: "/images/expertise/expertise-12.jpg",
+        image: "/images/expertise/mac.webp",
         direction: "right",
         highlight: true,
         bullets: ["M1tr Milling", "Lathe", "Surface Grinder", "Power Saw", "Press Tool & Die Making", "Jig & Fixture Making", "Tool Sharpening", "Boring, Tapping & Sawing", "Punching, Bending & Forming"]
@@ -335,7 +335,7 @@ export const expertiseSections = [
         heading: "Punching, Bending & Forming",
         subheading: "Complex geometries handled with experience and craftsmanship.",
         content: "Advanced punching, bending, and forming capabilities for complex sheet metal geometries with precision and consistency.",
-        image: "/images/expertise/expertise-13.jpg",
+        image: "/images/expertise/bending.webp",
         direction: "left"
     },
     {
@@ -343,7 +343,7 @@ export const expertiseSections = [
         heading: "Sheet Metal & Duct Fabrication",
         subheading: "HVAC ductwork and standardized product solutions.",
         content: "Pacific Hitech has two unique HVAC duct fabrication strengths: (1) bespoke collection solutions based on client requirements, (2) standardised products created from bespoke solutions to address common problems.",
-        image: "/images/expertise/expertise-14.jpg",
+        image: "/images/expertise/duct.webp",
         direction: "right",
         highlight: true
     },
@@ -352,7 +352,7 @@ export const expertiseSections = [
         heading: "Pipe Support System",
         subheading: "Designed to protect and secure above-ground pipe-work.",
         content: "Designed pipe support systems: compatible material selection, secure attachments, load-resistance, corrosion protection, clamped for movement (or allowed where thermal movement is required), and correctly supported to avoid stress welds.",
-        image: "/images/expertise/expertise-15.jpg",
+        image: "/images/expertise/support.webp",
         direction: "left",
         highlight: true
     },
@@ -361,7 +361,7 @@ export const expertiseSections = [
         heading: "Cable Tray, Ladder & Support Systems",
         subheading: "Engineered cable tray systems manufactured to standards and load requirements.",
         content: "Pacific Hitech cable tray systems are manufactured to precise standards, ensuring standardized materials and rated load-bearing capacities. We produce a full range of cable trays and support systems as engineered products.",
-        image: "/images/expertise/expertise-16.jpg",
+        image: "/images/expertise/p-1.webp",
         direction: "right",
         highlight: true
     }

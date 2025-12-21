@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useTranslation } from '@/hooks/useTranslation';
-import { productsList } from '@/data/content';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import ProductModal from '@/components/ProductModal';
+import { productsList } from '@/data/content';
+import { useTranslation } from '@/hooks/useTranslation';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Products: React.FC = () => {
     const t = useTranslation();
@@ -17,7 +17,7 @@ const Products: React.FC = () => {
             <section className="bg-industrial-slate-900 text-white py-20 lg:pt-48 lg:pb-20 relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/images/hero/construction.jpg"
+                        src="/images/hero/range.webp"
                         alt="Products Background"
                         className="w-full h-full object-cover opacity-20"
                     />

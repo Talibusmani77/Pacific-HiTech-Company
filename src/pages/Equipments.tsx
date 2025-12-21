@@ -9,19 +9,19 @@ import { FileText } from 'lucide-react';
 const equipmentCarouselSlides = [
     {
         id: 1,
-        image: '/images/equipment/carousel-1.jpg',
+        image: '/images/equipment/state.webp',
         caption: 'State-of-the-Art Machinery',
         description: 'Advanced equipment for precision manufacturing',
     },
     {
         id: 2,
-        image: '/images/equipment/carousel-2.jpg',
+        image: '/images/equipment/tech.webp',
         caption: 'CNC Technology',
         description: 'Computer-controlled precision and repeatability',
     },
     {
         id: 3,
-        image: '/images/equipment/carousel-3.jpg',
+        image: '/images/equipment/eqi.webp',
         caption: 'Heavy-Duty Equipment',
         description: 'Capable of handling large-scale industrial projects',
     },

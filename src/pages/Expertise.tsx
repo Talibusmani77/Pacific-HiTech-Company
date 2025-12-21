@@ -10,19 +10,19 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const expertiseCarouselSlides = [
     {
         id: 1,
-        image: '/images/expertise/carousel-1.jpg',
+        image: '/images/expertise/exp1.webp',
         caption: 'Precision Engineering',
         description: 'Advanced fabrication and cutting technologies',
     },
     {
         id: 2,
-        image: '/images/expertise/carousel-2.jpg',
+        image: '/images/expertise/exp2.webp',
         caption: 'Industrial Excellence',
         description: 'Serving global clients with certified processes',
     },
     {
         id: 3,
-        image: '/images/expertise/carousel-3.jpg',
+        image: '/images/expertise/exp3.webp',
         caption: 'Quality Assurance',
         description: 'Tight tolerances and consistent results',
     },
@@ -53,16 +53,23 @@ const Expertise: React.FC = () => {
 
     return (
         <div className="min-h-screen">
-            {/* Top Carousel */}
+            {/* Top Carousel with Full Image Display */}
             <div className="relative z-0">
                 <AnimatedCarousel
                     slides={expertiseCarouselSlides}
                     autoplay={true}
                     autoplayDelay={5000}
                     effect="fade"
-                    height="500px"
+                    height="700px"
                     showCaptions={true}
                 />
+                {/* Add CSS to override image styling for full image display */}
+                <style jsx>{`
+                    :global(.animated-carousel-container img) {
+                        object-fit: contain !important;
+                        object-position: center !important;
+                    }
+                `}</style>
             </div>
 
             {/* Page Intro */}

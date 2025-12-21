@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useTranslation } from '@/hooks/useTranslation';
 import { companyStats, whyChooseUs } from '@/data/content';
-import { Users, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, Globe, Users } from 'lucide-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
@@ -20,7 +20,7 @@ const About: React.FC = () => {
             <section className="bg-industrial-slate-900 text-white py-20 lg:pt-48 lg:pb-20 relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/images/hero/steel-fabrication.jpg"
+                        src="/images/hero/about.webp"
                         alt="About Background"
                         className="w-full h-full object-cover opacity-20"
                     />

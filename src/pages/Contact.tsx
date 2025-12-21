@@ -8,19 +8,19 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 const contactCarouselSlides = [
     {
         id: 1,
-        image: '/images/contact/carousel-1.jpg',
+        image: '/images/contact/contact.webp',
         caption: "Let's Connect",
         description: 'We respond within 24 hours',
     },
     {
         id: 2,
-        image: '/images/contact/carousel-2.jpg',
+        image: '/images/contact/expert.webp',
         caption: 'Expert Support',
         description: 'Our team is ready to assist you',
     },
     {
         id: 3,
-        image: '/images/contact/carousel-3.jpg',
+        image: '/images/contact/global.webp',
         caption: 'Global Reach',
         description: 'Serving clients worldwide',
     },
