@@ -3,7 +3,7 @@ import Lightbox from '@/components/Lightbox';
 import { projectsData } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
 import { motion } from 'framer-motion';
-import { Filter } from 'lucide-react';
+
 import React, { useState } from 'react';
 
 const workCarouselSlides = [
@@ -29,19 +29,11 @@ const workCarouselSlides = [
 
 const Work: React.FC = () => {
     const t = useTranslation();
-    const [selectedCategory, setSelectedCategory] = useState<string>('All');
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
     const [visibleProjects, setVisibleProjects] = useState(6);
 
-    const categories = ['All', 'Fabrication', 'Laser', 'Machining', 'Ductwork', 'Piping'];
-
-    const filteredProjects =
-        selectedCategory === 'All'
-            ? projectsData
-            : projectsData.filter((project) => project.category === selectedCategory);
-
-    const displayedProjects = filteredProjects.slice(0, visibleProjects);
+    const displayedProjects = projectsData.slice(0, visibleProjects);
 
     const handleLoadMore = () => {
         setVisibleProjects((prev) => prev + 6);
@@ -76,28 +68,7 @@ const Work: React.FC = () => {
                         </p>
                     </div>
 
-                    {/* Category Filter */}
-                    <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-                        <div className="flex items-center space-x-2 text-industrial-slate-600">
-                            <Filter className="w-5 h-5" />
-                            <span className="font-semibold">{t.work.filter}</span>
-                        </div>
-                        {categories.map((category) => (
-                            <button
-                                key={category}
-                                onClick={() => {
-                                    setSelectedCategory(category);
-                                    setVisibleProjects(6);
-                                }}
-                                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category
-                                    ? 'bg-cta-blue text-white shadow-lg scale-105'
-                                    : 'bg-industrial-slate-100 text-industrial-slate-700 hover:bg-industrial-slate-200'
-                                    }`}
-                            >
-                                {category}
-                            </button>
-                        ))}
-                    </div>
+
 
                     {/* Projects Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -121,17 +92,6 @@ const Work: React.FC = () => {
                                         <h3 className="text-white font-bold text-xl mb-2">
                                             {project.title}
                                         </h3>
-                                        <p className="text-white/90 text-sm mb-3">{project.description}</p>
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.tags.map((tag) => (
-                                                <span
-                                                    key={tag}
-                                                    className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs"
-                                                >
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                        </div>
                                     </div>
                                 </div>
                             </motion.div>
@@ -139,7 +99,7 @@ const Work: React.FC = () => {
                     </div>
 
                     {/* Load More Button */}
-                    {visibleProjects < filteredProjects.length && (
+                    {visibleProjects < projectsData.length && (
                         <div className="text-center mt-12">
                             <button onClick={handleLoadMore} className="btn-primary">
                                 {t.work.loadMore}
@@ -148,7 +108,7 @@ const Work: React.FC = () => {
                     )}
 
                     {/* No Results */}
-                    {filteredProjects.length === 0 && (
+                    {projectsData.length === 0 && (
                         <div className="text-center py-12">
                             <p className="text-industrial-slate-600 text-lg">
                                 {t.work.noProjects}

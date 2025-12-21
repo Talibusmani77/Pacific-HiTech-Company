@@ -195,12 +195,13 @@ const Navbar: React.FC = () => {
                             className="fixed top-0 right-0 bottom-0 w-[280px] bg-white z-[100] shadow-2xl overflow-y-auto lg:hidden"
                         >
                             <div className="p-6 border-b border-industrial-slate-100 flex items-center justify-between">
-                                <div className="flex items-center space-x-2">
-                                    <div className="w-8 h-8 bg-gradient-to-br from-industrial-blue-500 to-industrial-steel-500 rounded-md flex items-center justify-center">
-                                        <span className="text-white font-bold text-sm">PH</span>
-                                    </div>
-                                    <span className="font-bold text-industrial-slate-900">Pacific Hitech</span>
-                                </div>
+                                <Link to="/" className="flex items-center space-x-3 group">
+                            <img
+                                src="/images/ph-logo.webp"
+                                alt="Pacific Hitech Logo"
+                                className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                            />
+                        </Link>
                                 <button
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="p-1 rounded-full hover:bg-industrial-slate-100 transition-colors"

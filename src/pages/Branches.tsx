@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import AnimatedCarousel from '@/components/AnimatedCarousel';
 import { officeContacts } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
-import { Phone, Mail, MapPin, Navigation } from 'lucide-react';
+import { Phone, Mail, MapPin, Navigation, FileText } from 'lucide-react';
 
 const branchesCarouselSlides = [
     {
@@ -143,20 +143,29 @@ const Branches: React.FC = () => {
                                         </div>
                                     </div>
 
-                                    <a
-                                        href={officeContacts.india.directionsUrl || officeContacts.india.mapUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="btn-primary inline-flex items-center space-x-2 mt-4"
-                                    >
-                                        <Navigation className="w-5 h-5" />
-                                        <span>{t.branches.getDirections}</span>
-                                    </a>
+                                    <div className="flex flex-wrap gap-4 mt-6">
+                                        <a
+                                            href={officeContacts.india.directionsUrl || officeContacts.india.mapUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="btn-primary inline-flex items-center space-x-2"
+                                        >
+                                            <Navigation className="w-5 h-5" />
+                                            <span>{t.branches.getDirections}</span>
+                                        </a>
+                                        <button
+                                            onClick={() => window.open('/images/ph-brochure.pdf', '_blank')}
+                                            className="btn-primary inline-flex items-center space-x-2"
+                                        >
+                                            <FileText className="w-5 h-5" />
+                                            <span>{t.nav.brochure}</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Map - Now Clickable */}
-                            <div 
+                            <div
                                 className="h-[500px] lg:h-auto relative cursor-pointer group"
                                 onClick={() => handleMapClick(officeContacts.india.directionsUrl || officeContacts.india.mapUrl)}
                             >
@@ -196,7 +205,7 @@ const Branches: React.FC = () => {
                     >
                         <div className="grid grid-cols-1 lg:grid-cols-2">
                             {/* Map - Now Clickable */}
-                            <div 
+                            <div
                                 className="h-[500px] lg:h-auto order-2 lg:order-1 relative cursor-pointer group"
                                 onClick={() => handleMapClick(officeContacts.saudi.directionsUrl || officeContacts.saudi.mapUrl)}
                             >

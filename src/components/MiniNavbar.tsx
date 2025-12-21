@@ -11,25 +11,32 @@ const MiniNavbar: React.FC = () => {
     // Default to India office for general contact, or provide a way to choose?
     // Using India office as primary for now as per "head office" status, or maybe show both?
     // Requirement says "email and contact us (phone no. to click and call)".
-    const contact = officeContacts.india;
 
     return (
         <div className="bg-industrial-slate-900 text-white py-2 text-sm z-[60] relative border-b border-industrial-slate-800">
             <div className="container-custom flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
                 <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6 rtl:space-x-reverse">
                     <a
-                        href={`mailto:${contact.email}`}
+                        href={`mailto:${officeContacts.saudi.email}`}
                         className="flex items-center space-x-2 text-industrial-slate-300 hover:text-white transition-colors group"
                     >
                         <Mail className="w-4 h-4 text-industrial-blue-400 group-hover:text-cta-blue transition-colors" />
                         <span>{t.miniNav.email} {officeContacts.saudi.email}</span>
                     </a>
                     <a
-                        href={`tel:${contact.tel}`}
+                        href={`tel:${officeContacts.saudi.mobile.split('/')[0].trim()}`}
                         className="flex items-center space-x-2 text-industrial-slate-300 hover:text-white transition-colors group"
                     >
                         <Phone className="w-4 h-4 text-industrial-blue-400 group-hover:text-cta-blue transition-colors" />
-                        <span>{t.miniNav.call} {contact.tel}</span>
+                        <span>{t.miniNav.call} {officeContacts.saudi.tel}</span>
+                    </a>
+                    <span>Or</span>
+                    <a
+                        href={`tel:${officeContacts.saudi.mobile.split('/')[0].trim()}`}
+                        className="flex items-center space-x-2 text-industrial-slate-300 hover:text-white transition-colors group"
+                    >
+                        <Phone className="w-4 h-4 text-industrial-blue-400 group-hover:text-cta-blue transition-colors" />
+                        <span>{t.miniNav.call} {officeContacts.saudi.mobile}</span>
                     </a>
                 </div>
                 <div className="hidden md:flex items-center space-x-4 rtl:space-x-reverse text-industrial-slate-400">

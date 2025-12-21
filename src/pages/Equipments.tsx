@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import AnimatedCarousel from '@/components/AnimatedCarousel';
-import EquipmentModal from '@/components/EquipmentModal';
 import { equipmentList } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
-import { FileText } from 'lucide-react';
 
 const equipmentCarouselSlides = [
     {
@@ -29,11 +27,6 @@ const equipmentCarouselSlides = [
 
 const Equipments: React.FC = () => {
     const t = useTranslation();
-    const [selectedMachine, setSelectedMachine] = useState<string>('');
-
-    const handleRequestSpec = (machineName: string) => {
-        setSelectedMachine(machineName);
-    };
 
     return (
         <div className="min-h-screen">
@@ -78,38 +71,14 @@ const Equipments: React.FC = () => {
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-industrial-slate-900/80 to-transparent" />
-                                    <div className="absolute top-4 right-4">
-                                        <span className="px-3 py-1 bg-industrial-blue-500 text-white text-xs font-semibold rounded-full">
-                                            {equipment.category}
-                                        </span>
-                                    </div>
+
                                 </div>
 
                                 {/* Content */}
                                 <div className="p-6">
-                                    <h3 className="text-h3 font-bold text-industrial-slate-900 mb-3">
+                                    <h3 className="text-h3 font-bold text-industrial-slate-900 mb-3 text-center">
                                         {equipment.name}
                                     </h3>
-
-                                    <ul className="space-y-2 mb-6">
-                                        {equipment.specs.map((spec, idx) => (
-                                            <li
-                                                key={idx}
-                                                className="flex items-start space-x-2 text-industrial-slate-700"
-                                            >
-                                                <span className="w-1.5 h-1.5 bg-industrial-blue-500 rounded-full mt-2 flex-shrink-0" />
-                                                <span className="text-sm">{spec}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                    <button
-                                        onClick={() => handleRequestSpec(equipment.name)} // Keeping function name for minimal diff but logic changes
-                                        className="w-full btn-outline flex items-center justify-center space-x-2 group-hover:bg-industrial-blue-500 group-hover:text-white group-hover:border-industrial-blue-500 transition-all duration-300"
-                                    >
-                                        <FileText className="w-4 h-4" />
-                                        <span>View Details</span>
-                                    </button>
                                 </div>
                             </motion.div>
                         ))}
@@ -117,13 +86,7 @@ const Equipments: React.FC = () => {
                 </div>
             </section>
 
-            {/* Equipment Modal */}
-            <EquipmentModal
-                equipment={selectedMachine ? equipmentList.find(e => e.name === selectedMachine) || null : null}
-                onClose={() => {
-                    setSelectedMachine('');
-                }}
-            />
+
         </div>
     );
 };

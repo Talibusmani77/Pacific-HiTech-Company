@@ -154,31 +154,13 @@ const Footer: React.FC = () => {
                         {/* Social Media Icons */}
                         <div className="flex items-center space-x-4">
                             <a
-                                href="https://linkedin.com"
+                                href="https://www.linkedin.com/company/pacifichitech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-industrial-slate-800 flex items-center justify-center hover:bg-industrial-blue-500 transition-colors duration-300"
                                 aria-label="LinkedIn"
                             >
                                 <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a
-                                href="https://facebook.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-full bg-industrial-slate-800 flex items-center justify-center hover:bg-industrial-blue-500 transition-colors duration-300"
-                                aria-label="Facebook"
-                            >
-                                <Facebook className="w-5 h-5" />
-                            </a>
-                            <a
-                                href="https://instagram.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-full bg-industrial-slate-800 flex items-center justify-center hover:bg-industrial-blue-500 transition-colors duration-300"
-                                aria-label="Instagram"
-                            >
-                                <Instagram className="w-5 h-5" />
                             </a>
                         </div>
 

@@ -1,25 +1,25 @@
 // Office Contact Information - Saudi Arabia First
 export const officeContacts = {
-   saudi: {
-    name: "Saudi Arabia — Branch Office",
-    tel: "+966 11 292 1187",
-    mobile: "+966 56 172 7061",
-    email: "info.ksa@phitechgroup.com",
-    address: "6987, Ali Bin Abi Talib Rd, Jareer District, Riyadh - 12837, Saudi Arabia",
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.0!2d46.7!3d24.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzAwLjAiTiA0NsKwNDInMDAuMCJF!5e0!3m2!1sen!2ssa!4v1234567890",
-    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=6987+Ali+Bin+Abi+Talib+Rd+Jareer+District+Riyadh+12837+Saudi+Arabia",
-    mapUrl: "https://www.google.com/maps/dir/?api=1&destination=6987+Ali+Bin+Abi+Talib+Rd+Jareer+District+Riyadh+12837+Saudi+Arabia" // Fallback
-},
-india: {
-    name: "India — Head Office",
-    tel: "+91 912 941 6070",
-    mobile: "+91 989 794 7864",
-    email: "info@phitechgroup.com",
-    address: "125A, Noor Nagar Extn, Jamia Nagar, New Delhi - 110025, India",
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0!2d77.2!3d28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMwJzAwLjAiTiA3N8KwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890",
-    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=125A+Noor+Nagar+Extn+Jamia+Nagar+New+Delhi+110025+India",
-    mapUrl: "https://www.google.com/maps/dir/?api=1&destination=125A+Noor+Nagar+Extn+Jamia+Nagar+New+Delhi+110025+India" // Fallback
-}
+    saudi: {
+        name: "Saudi Arabia — Branch Office",
+        tel: "+966 56 172 7061",
+        mobile: "+966 54 221 3168",
+        email: "info.ksa@phitechgroup.com",
+        address: "6987, Ali Bin Abi Talib Rd, Jareer District, Riyadh - 12837, Saudi Arabia",
+        embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.0!2d46.7!3d24.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzAwLjAiTiA0NsKwNDInMDAuMCJF!5e0!3m2!1sen!2ssa!4v1234567890",
+        directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=6987+Ali+Bin+Abi+Talib+Rd+Jareer+District+Riyadh+12837+Saudi+Arabia",
+        mapUrl: "https://www.google.com/maps/dir/?api=1&destination=6987+Ali+Bin+Abi+Talib+Rd+Jareer+District+Riyadh+12837+Saudi+Arabia" // Fallback
+    },
+    india: {
+        name: "India — Head Office",
+        tel: "+91 912 941 6070",
+        mobile: "+91 989 794 7864",
+        email: "ahmadworks38@gmail.com",
+        address: "125A, Noor Nagar Extn, Jamia Nagar, New Delhi - 110025, India",
+        embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0!2d77.2!3d28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMwJzAwLjAiTiA3N8KwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890",
+        directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=125A+Noor+Nagar+Extn+Jamia+Nagar+New+Delhi+110025+India",
+        mapUrl: "https://www.google.com/maps/dir/?api=1&destination=125A+Noor+Nagar+Extn+Jamia+Nagar+New+Delhi+110025+India" // Fallback
+    }
 };
 
 // Company Stats
@@ -465,7 +465,7 @@ export const equipmentList = [
 export const projectsData = [
     {
         id: 1,
-        title: "Industrial Steel Structure",
+        title: "Tank",
         category: "Fabrication",
         description: "Large-scale structural steel fabrication for industrial facility",
         image: "/images/projects/pro1.webp",
@@ -473,7 +473,7 @@ export const projectsData = [
     },
     {
         id: 2,
-        title: "Precision Laser Cutting",
+        title: "Gratings",
         category: "Laser",
         description: "Complex laser cutting project with tight tolerances",
         image: "/images/projects/pro2.webp",
@@ -481,7 +481,7 @@ export const projectsData = [
     },
     {
         id: 3,
-        title: "CNC Machined Components",
+        title: "Heavy Pipes",
         category: "Machining",
         description: "High-precision CNC machined parts for automotive industry",
         image: "/images/projects/pro3.webp",
@@ -489,7 +489,7 @@ export const projectsData = [
     },
     {
         id: 4,
-        title: "HVAC Ductwork System",
+        title: "Embedded Plate",
         category: "Ductwork",
         description: "Complete HVAC duct fabrication and installation",
         image: "/images/projects/pro4.webp",
@@ -497,7 +497,7 @@ export const projectsData = [
     },
     {
         id: 5,
-        title: "Pipe Support Installation",
+        title: "Guardrails",
         category: "Piping",
         description: "Industrial pipe support system design and installation",
         image: "/images/projects/pro5.webp",
@@ -505,7 +505,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "NDT test Weilding",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro6.webp",
@@ -513,7 +513,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Handrail",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro7.webp",
@@ -521,7 +521,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Elevator Brackets",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro8.webp",
@@ -529,7 +529,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Heavy Structure",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro9.webp",
@@ -537,7 +537,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Curved Cable Tray",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro10.webp",
@@ -545,7 +545,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Heavy Washer",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro11.webp",
@@ -553,7 +553,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Washer",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro12.webp",
@@ -561,7 +561,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Lift Brackets",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro13.webp",
@@ -569,7 +569,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Crash Barrier",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro14.webp",
@@ -577,7 +577,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Base Pole",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro15.webp",
@@ -585,7 +585,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "HDG Gratings",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro16.webp",
@@ -593,7 +593,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Trench Covers",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro18.webp",
@@ -601,7 +601,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Cable Tray System",
+        title: "Diesel Tank",
         category: "Cable Tray",
         description: "Engineered cable tray and ladder system for facility",
         image: "/images/projects/pro19.webp",
