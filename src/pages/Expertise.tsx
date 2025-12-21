@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import AnimatedCarousel from '@/components/AnimatedCarousel';
 import StickyQuoteCTA from '@/components/StickyQuoteCTA';
 import { expertiseSections } from '@/data/content';
-import { useTranslation } from '@/hooks/useTranslation';
+
 import { AlertCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -29,7 +29,7 @@ const expertiseCarouselSlides = [
 ];
 
 const Expertise: React.FC = () => {
-    const t = useTranslation();
+   
     const { isRTL } = useLanguage();
     const observerRef = useRef<IntersectionObserver | null>(null);
 
