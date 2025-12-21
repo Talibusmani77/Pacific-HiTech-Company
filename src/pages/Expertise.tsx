@@ -1,178 +1,159 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import AnimatedCarousel from '@/components/AnimatedCarousel';
-import StickyQuoteCTA from '@/components/StickyQuoteCTA';
-import { expertiseSections } from '@/data/content';
-import { useTranslation } from '@/hooks/useTranslation';
-import { AlertCircle } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import ContactForm from '@/components/ContactForm';
+import { officeContacts } from '@/data/content';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
-const expertiseCarouselSlides = [
+const contactCarouselSlides = [
     {
         id: 1,
-        image: '/images/expertise/exp1.webp',
-        caption: 'Precision Engineering',
-        description: 'Advanced fabrication and cutting technologies',
+        image: '/images/contact/contact.webp',
+        caption: "Let's Connect",
+        description: 'We respond within 24 hours',
     },
     {
         id: 2,
-        image: '/images/expertise/exp2.webp',
-        caption: 'Industrial Excellence',
-        description: 'Serving global clients with certified processes',
+        image: '/images/contact/expert.webp',
+        caption: 'Expert Support',
+        description: 'Our team is ready to assist you',
     },
     {
         id: 3,
-        image: '/images/expertise/exp3.webp',
-        caption: 'Quality Assurance',
-        description: 'Tight tolerances and consistent results',
+        image: '/images/contact/global.webp',
+        caption: 'Global Reach',
+        description: 'Serving clients worldwide',
     },
 ];
 
-const Expertise: React.FC = () => {
-    const t = useTranslation();
-    const { isRTL } = useLanguage();
-    const observerRef = useRef<IntersectionObserver | null>(null);
-
-    useEffect(() => {
-        observerRef.current = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            },
-            { threshold: 0.1 }
-        );
-
-        const elements = document.querySelectorAll('.animate-on-scroll');
-        elements.forEach((el) => observerRef.current?.observe(el));
-
-        return () => observerRef.current?.disconnect();
-    }, []);
-
+const Contact: React.FC = () => {
     return (
         <div className="min-h-screen">
-            {/* Top Carousel with Full Image Display */}
-            <div className="relative z-0">
-                <AnimatedCarousel
-                    slides={expertiseCarouselSlides}
-                    autoplay={true}
-                    autoplayDelay={5000}
-                    effect="fade"
-                    height="700px"
-                    showCaptions={true}
-                />
-                {/* Add CSS to override image styling for full image display */}
-                <style jsx>{`
-                    :global(.animated-carousel-container img) {
-                        object-fit: contain !important;
-                        object-position: center !important;
-                    }
-                `}</style>
-            </div>
+            {/* Hero Carousel - Full Image Display */}
+            <AnimatedCarousel
+                slides={contactCarouselSlides}
+                autoplay={true}
+                autoplayDelay={5000}
+                effect="fade"
+                height="auto"
+                showCaptions={true}
+            />
 
-            {/* Page Intro */}
+            {/* Contact Section */}
             <section className="section-padding lg:pt-48 lg:pb-24 bg-white">
                 <div className="container-custom">
-                    <div className="max-w-4xl mx-auto text-center animate-on-scroll">
-                        <h1 className="text-h1 font-bold text-industrial-slate-900 mb-6">
-                            {t.expertise.title}
-                        </h1>
-                        <p className="text-lg text-industrial-slate-700 leading-relaxed">
-                            {t.expertise.intro}
-                        </p>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        {/* Contact Form */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <h2 className="text-h2 font-bold text-industrial-slate-900 mb-6">
+                                Send Us a Message
+                            </h2>
+
+                            <ContactForm />
+                        </motion.div>
+
+                        {/* Office Contact Cards - Saudi Arabia First */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="space-y-6"
+                        >
+                            <h2 className="text-h2 font-bold text-industrial-slate-900 mb-6">
+                                Our Offices
+                            </h2>
+
+                            {/* Saudi Arabia Office Card - First */}
+                            <div className="bg-gradient-to-br from-industrial-blue-50 to-white p-8 rounded-xl shadow-lg border border-industrial-blue-100">
+                                <div className="inline-block px-4 py-2 bg-industrial-blue-500 text-white rounded-full text-sm font-semibold mb-4">
+                                    Branch Office
+                                </div>
+                                <h3 className="text-h3 font-bold text-industrial-slate-900 mb-6">
+                                    Saudi Arabia
+                                </h3>
+
+                                <div className="space-y-4">
+                                    <div className="flex items-start space-x-3">
+                                        <Phone className="w-5 h-5 text-industrial-blue-600 mt-1 flex-shrink-0" />
+                                        <div>
+                                            <p className="text-industrial-slate-700">
+                                                {officeContacts.saudi.tel}
+                                            </p>
+                                            <p className="text-industrial-slate-700">
+                                                {officeContacts.saudi.mobile}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start space-x-3">
+                                        <Mail className="w-5 h-5 text-industrial-blue-600 mt-1 flex-shrink-0" />
+                                        <a
+                                            href={`mailto:${officeContacts.saudi.email}`}
+                                            className="text-industrial-blue-600 hover:text-industrial-blue-700 transition-colors duration-200"
+                                        >
+                                            {officeContacts.saudi.email}
+                                        </a>
+                                    </div>
+
+                                    <div className="flex items-start space-x-3">
+                                        <MapPin className="w-5 h-5 text-industrial-blue-600 mt-1 flex-shrink-0" />
+                                        <p className="text-industrial-slate-700">
+                                            {officeContacts.saudi.address}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* India Office Card - Second */}
+                            <div className="bg-gradient-to-br from-industrial-steel-50 to-white p-8 rounded-xl shadow-lg border border-industrial-steel-100">
+                                <div className="inline-block px-4 py-2 bg-industrial-steel-600 text-white rounded-full text-sm font-semibold mb-4">
+                                    Head Office
+                                </div>
+                                <h3 className="text-h3 font-bold text-industrial-slate-900 mb-6">
+                                    India
+                                </h3>
+
+                                <div className="space-y-4">
+                                    <div className="flex items-start space-x-3">
+                                        <Phone className="w-5 h-5 text-industrial-steel-600 mt-1 flex-shrink-0" />
+                                        <div>
+                                            <p className="text-industrial-slate-700">
+                                                {officeContacts.india.tel}
+                                            </p>
+                                            <p className="text-industrial-slate-700">
+                                                {officeContacts.india.mobile}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start space-x-3">
+                                        <Mail className="w-5 h-5 text-industrial-steel-600 mt-1 flex-shrink-0" />
+                                        <a
+                                            href={`mailto:${officeContacts.india.email}`}
+                                            className="text-industrial-blue-600 hover:text-industrial-blue-700 transition-colors duration-200"
+                                        >
+                                            {officeContacts.india.email}
+                                        </a>
+                                    </div>
+
+                                    <div className="flex items-start space-x-3">
+                                        <MapPin className="w-5 h-5 text-industrial-steel-600 mt-1 flex-shrink-0" />
+                                        <p className="text-industrial-slate-700">
+                                            {officeContacts.india.address}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
-
-            {/* Expertise Sections */}
-            <section className="bg-industrial-slate-50">
-                {expertiseSections.map((section, index) => (
-                    <div
-                        key={section.id}
-                        className={`section-padding ${index % 2 === 0 ? 'bg-white' : 'bg-industrial-slate-50'
-                            }`}
-                    >
-                        <div className="container-custom">
-                            <div
-                                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${section.direction === 'right' ? 'lg:flex-row-reverse' : ''
-                                    }`}
-                            >
-                                {/* Image */}
-                                <motion.div
-                                    initial={{ opacity: 0, x: (section.direction === 'left' ? -50 : 50) * (isRTL ? -1 : 1) }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6 }}
-                                    className={`${section.direction === 'right' ? 'lg:order-2' : ''}`}
-                                >
-                                    <div className="relative rounded-xl overflow-hidden shadow-2xl group">
-                                        <img
-                                            src={section.image}
-                                            alt={section.heading}
-                                            className="w-full h-[300px] sm:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-industrial-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                    </div>
-                                </motion.div>
-
-                                {/* Content */}
-                                <motion.div
-                                    initial={{ opacity: 0, x: (section.direction === 'left' ? 50 : -50) * (isRTL ? -1 : 1) }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: 0.2 }}
-                                    className={`${section.direction === 'right' ? 'lg:order-1' : ''}`}
-                                >
-                                    <h2 className="text-h2 font-bold text-industrial-slate-900 mb-3">
-                                        {section.heading}
-                                    </h2>
-                                    <h3 className="text-h3 text-industrial-blue-600 mb-6">
-                                        {section.subheading}
-                                    </h3>
-
-                                    {section.highlight && (
-                                        <div className={`bg-industrial-blue-50 ${isRTL ? 'border-r-4 rounded-l-lg' : 'border-l-4 rounded-r-lg'} border-industrial-blue-500 p-4 mb-6`}>
-                                            <div className="flex items-start space-x-3 rtl:space-x-reverse">
-                                                <AlertCircle className="w-5 h-5 text-industrial-blue-600 flex-shrink-0 mt-0.5" />
-                                                <p className="text-industrial-slate-800 font-medium">
-                                                    {section.content}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    {!section.highlight && (
-                                        <p className="text-industrial-slate-700 leading-relaxed mb-6">
-                                            {section.content}
-                                        </p>
-                                    )}
-
-                                    {section.bullets && (
-                                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                            {section.bullets.map((bullet, idx) => (
-                                                <li
-                                                    key={idx}
-                                                    className="flex items-start space-x-2 rtl:space-x-reverse text-industrial-slate-700"
-                                                >
-                                                    <span className="w-2 h-2 bg-industrial-blue-500 rounded-full mt-2 flex-shrink-0" />
-                                                    <span>{bullet}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </motion.div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </section>
-
-            {/* Sticky Quote CTA */}
-            <StickyQuoteCTA />
         </div>
     );
 };
 
-export default Expertise;
+export default Contact;
