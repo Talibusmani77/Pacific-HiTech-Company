@@ -52,9 +52,9 @@ const Expertise: React.FC = () => {
     }, []);
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen overflow-x-hidden">
             {/* Top Carousel with Full Image Display */}
-            <div className="relative z-0 expertise-carousel">
+            <div className="relative z-0 expertise-carousel w-full">
                 <AnimatedCarousel
                     slides={expertiseCarouselSlides}
                     autoplay={true}
@@ -74,13 +74,13 @@ const Expertise: React.FC = () => {
                 }} />
 
                 {/* Central Overlay Text */}
-                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4">
-                    <div className="max-w-4xl bg-black/50 backdrop-blur-sm p-8 rounded-2xl border border-white/10 pointer-events-auto">
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4 sm:px-6">
+                    <div className="w-full max-w-4xl bg-black/50 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/10 pointer-events-auto">
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 0.8 }}
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+                            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight"
                         >
                             Our Expertise in Heavy Fabrication, Precision Cutting & Custom Engineering
                         </motion.h1>
@@ -88,7 +88,7 @@ const Expertise: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.8, duration: 0.8 }}
-                            className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto font-light"
+                            className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto font-light"
                         >
                             Pacific Hitech provides world-class services across heavy industrial fabrication, precision cutting, machining, ductwork and custom engineered solutions. Our machinery and processes ensure high accuracy and reliable delivery to global clients.
                         </motion.p>
@@ -97,31 +97,31 @@ const Expertise: React.FC = () => {
             </div>
 
             {/* Expertise Sections */}
-            <section className="bg-industrial-slate-50">
+            <section className="bg-industrial-slate-50 w-full overflow-x-hidden">
                 {expertiseSections.map((section, index) => (
                     <div
                         key={section.id}
                         className={`section-padding ${index % 2 === 0 ? 'bg-white' : 'bg-industrial-slate-50'
                             }`}
                     >
-                        <div className="container-custom">
+                        <div className="container-custom px-4 sm:px-6">
                             <div
-                                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${section.direction === 'right' ? 'lg:flex-row-reverse' : ''
+                                className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center ${section.direction === 'right' ? 'lg:flex-row-reverse' : ''
                                     }`}
                             >
                                 {/* Image */}
                                 <motion.div
-                                    initial={{ opacity: 0, x: (section.direction === 'left' ? -50 : 50) * (isRTL ? -1 : 1) }}
+                                    initial={{ opacity: 0, x: 0 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6 }}
-                                    className={`${section.direction === 'right' ? 'lg:order-2' : ''}`}
+                                    className={`w-full ${section.direction === 'right' ? 'lg:order-2' : ''}`}
                                 >
-                                    <div className="relative rounded-xl overflow-hidden shadow-2xl group">
+                                    <div className="relative rounded-lg sm:rounded-xl overflow-hidden shadow-xl sm:shadow-2xl group">
                                         <img
                                             src={section.image}
                                             alt={section.heading}
-                                            className="w-full h-[300px] sm:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+                                            className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-industrial-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                     </div>
@@ -129,24 +129,24 @@ const Expertise: React.FC = () => {
 
                                 {/* Content */}
                                 <motion.div
-                                    initial={{ opacity: 0, x: (section.direction === 'left' ? 50 : -50) * (isRTL ? -1 : 1) }}
+                                    initial={{ opacity: 0, x: 0 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
-                                    className={`${section.direction === 'right' ? 'lg:order-1' : ''}`}
+                                    className={`w-full ${section.direction === 'right' ? 'lg:order-1' : ''}`}
                                 >
-                                    <h2 className="text-h2 font-bold text-industrial-slate-900 mb-6">
+                                    <h2 className="text-2xl sm:text-3xl md:text-h2 font-bold text-industrial-slate-900 mb-4 sm:mb-6">
                                         {section.heading}
                                     </h2>
-                                    <h3 className="text-h3 text-industrial-blue-600 mb-6">
+                                    <h3 className="text-xl sm:text-2xl md:text-h3 text-industrial-blue-600 mb-4 sm:mb-6">
                                         {section.subheading}
                                     </h3>
 
                                     {section.highlight && (
-                                        <div className={`bg-industrial-blue-50 ${isRTL ? 'border-r-4 rounded-l-lg' : 'border-l-4 rounded-r-lg'} border-industrial-blue-500 p-4 mb-6`}>
-                                            <div className="flex items-start space-x-3 rtl:space-x-reverse">
-                                                <AlertCircle className="w-5 h-5 text-industrial-blue-600 flex-shrink-0 mt-0.5" />
-                                                <p className="text-industrial-slate-800 font-medium">
+                                        <div className={`bg-industrial-blue-50 ${isRTL ? 'border-r-4 rounded-l-lg' : 'border-l-4 rounded-r-lg'} border-industrial-blue-500 p-3 sm:p-4 mb-4 sm:mb-6`}>
+                                            <div className="flex items-start space-x-2 sm:space-x-3 rtl:space-x-reverse">
+                                                <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-industrial-blue-600 flex-shrink-0 mt-0.5" />
+                                                <p className="text-sm sm:text-base text-industrial-slate-800 font-medium">
                                                     {section.content}
                                                 </p>
                                             </div>
@@ -154,20 +154,20 @@ const Expertise: React.FC = () => {
                                     )}
 
                                     {!section.highlight && (
-                                        <p className="text-industrial-slate-700 leading-relaxed mb-6">
+                                        <p className="text-sm sm:text-base text-industrial-slate-700 leading-relaxed mb-4 sm:mb-6">
                                             {section.content}
                                         </p>
                                     )}
 
                                     {section.bullets && (
-                                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        <ul className="grid grid-cols-1 gap-2 sm:gap-3">
                                             {section.bullets.map((bullet, idx) => (
                                                 <li
                                                     key={idx}
-                                                    className="flex items-start space-x-2 rtl:space-x-reverse text-industrial-slate-700"
+                                                    className="flex items-start space-x-2 rtl:space-x-reverse text-sm sm:text-base text-industrial-slate-700"
                                                 >
-                                                    <span className="w-2 h-2 bg-industrial-blue-500 rounded-full mt-2 flex-shrink-0" />
-                                                    <span>{bullet}</span>
+                                                    <span className="w-2 h-2 bg-industrial-blue-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0" />
+                                                    <span className="flex-1 break-words">{bullet}</span>
                                                 </li>
                                             ))}
                                         </ul>
