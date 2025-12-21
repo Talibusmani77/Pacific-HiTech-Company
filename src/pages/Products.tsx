@@ -26,7 +26,7 @@ const Products: React.FC = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-bold mb-4"
+                        className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
                     >
                         {t.products.title}
                     </motion.h1>
@@ -73,7 +73,7 @@ const Products: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="p-6 text-center">
-                                    <h3 className="text-xl font-bold text-industrial-slate-900 group-hover:text-cta-blue transition-colors">
+                                    <h3 className="text-h3 font-semibold text-industrial-slate-900 mb-4 group-hover:text-cta-blue transition-colors">
                                         {product.name}
                                     </h3>
                                 </div>
@@ -83,7 +83,7 @@ const Products: React.FC = () => {
 
                     {/* Contact CTA */}
                     <div className="mt-20 text-center bg-white p-12 rounded-2xl shadow-sm border border-industrial-slate-200">
-                        <h2 className="text-2xl font-bold text-industrial-slate-900 mb-4">{t.home.needSolution}</h2>
+                        <h2 className="text-h2 font-bold text-industrial-slate-900 mb-6">{t.home.needSolution}</h2>
                         <p className="text-industrial-slate-600 mb-8 max-w-xl mx-auto">
                             Can't find what you're looking for? Reach out to our team for custom fabrication and specific product inquiries.
                         </p>

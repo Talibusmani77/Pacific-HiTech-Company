@@ -80,7 +80,7 @@ const Expertise: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 0.8 }}
-                            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
                         >
                             Our Expertise in Heavy Fabrication, Precision Cutting & Custom Engineering
                         </motion.h1>
@@ -135,7 +135,7 @@ const Expertise: React.FC = () => {
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                     className={`${section.direction === 'right' ? 'lg:order-1' : ''}`}
                                 >
-                                    <h2 className="text-h2 font-bold text-industrial-slate-900 mb-3">
+                                    <h2 className="text-h2 font-bold text-industrial-slate-900 mb-6">
                                         {section.heading}
                                     </h2>
                                     <h3 className="text-h3 text-industrial-blue-600 mb-6">

@@ -170,7 +170,7 @@ const Home: React.FC = () => {
             <section className="section-padding">
                 <div className="container-custom">
                     <div className="text-center mb-12 animate-on-scroll">
-                        <h2 className="text-h2 font-bold text-industrial-slate-900 mb-4">
+                        <h2 className="text-h2 font-bold text-industrial-slate-900 mb-6">
                             {t.home.ourServices}
                         </h2>
                         <p className="text-lg text-industrial-slate-600 max-w-2xl mx-auto">
@@ -204,7 +204,7 @@ const Home: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className="p-6">
-                                        <h3 className="text-h3 font-semibold text-industrial-slate-900 mb-2">
+                                        <h3 className="text-h3 font-semibold text-industrial-slate-900 mb-4">
                                             {service.title}
                                         </h3>
                                         <p className="text-industrial-slate-600">{service.description}</p>
@@ -220,7 +220,7 @@ const Home: React.FC = () => {
             <section className="section-padding bg-gradient-to-br from-industrial-blue-600 to-industrial-steel-600 text-white">
                 <div className="container-custom">
                     <div className="text-center mb-12 animate-on-scroll">
-                        <h2 className="text-h2 font-bold mb-4">{t.home.whyChoose}</h2>
+                        <h2 className="text-h2 font-bold mb-6">{t.home.whyChoose}</h2>
                         <p className="text-xl text-white/90 max-w-2xl mx-auto">
                             {t.home.whySubtitle}
                         </p>
@@ -243,7 +243,7 @@ const Home: React.FC = () => {
                                             <IconComponent className="w-8 h-8 text-white" />
                                         </div>
                                     )}
-                                    <h3 className="text-h3 font-semibold mb-3">{pillar.title}</h3>
+                                    <h3 className="text-h3 font-semibold mb-4">{pillar.title}</h3>
                                     <p className="text-white/90">{pillar.description}</p>
                                 </motion.div>
                             );
@@ -282,7 +282,7 @@ const Home: React.FC = () => {
             <section className="section-padding">
                 <div className="container-custom">
                     <div className="text-center mb-12 animate-on-scroll">
-                        <h2 className="text-h2 font-bold text-industrial-slate-900 mb-4">
+                        <h2 className="text-h2 font-bold text-industrial-slate-900 mb-6">
                             {t.home.featuredProjects}
                         </h2>
                         <p className="text-lg text-industrial-slate-600 max-w-2xl mx-auto">
@@ -333,7 +333,7 @@ const Home: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-h2 font-bold mb-4">
+                        <h2 className="text-h2 font-bold mb-6">
                             {t.home.needSolution}
                         </h2>
                         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">

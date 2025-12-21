@@ -92,7 +92,7 @@ const About: React.FC = () => {
                                 transition={{ delay: index * 0.1 }}
                                 className="bg-industrial-slate-50 p-8 rounded-xl hover:shadow-md transition-shadow"
                             >
-                                <h3 className="text-xl font-bold text-industrial-slate-900 mb-4">{pillar.title}</h3>
+                                <h3 className="text-h3 font-semibold text-industrial-slate-900 mb-4">{pillar.title}</h3>
                                 <p className="text-industrial-slate-600">{pillar.description}</p>
                             </motion.div>
                         ))}

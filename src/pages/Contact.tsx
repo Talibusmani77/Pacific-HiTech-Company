@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
             />
 
             {/* Contact Section */}
-            <section className="section-padding lg:pt-48 lg:pb-24 bg-white">
+            <section className="section-padding bg-white">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Contact Form */}
