@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
                 autoplay={true}
                 autoplayDelay={5000}
                 effect="fade"
-                height="400px"
+                height="600px"
                 showCaptions={true}
             />
 

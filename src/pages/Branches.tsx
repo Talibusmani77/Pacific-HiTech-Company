@@ -51,28 +51,46 @@ const Branches: React.FC = () => {
     return (
         <div className="min-h-screen">
             {/* Top Carousel */}
-            <AnimatedCarousel
-                slides={branchesCarouselSlides}
-                autoplay={true}
-                autoplayDelay={5000}
-                effect="fade"
-                height="500px"
-                showCaptions={true}
-            />
+            <div className="relative z-0 branches-carousel">
+                <AnimatedCarousel
+                    slides={branchesCarouselSlides}
+                    autoplay={true}
+                    autoplayDelay={5000}
+                    effect="fade"
+                    height="600px"
+                    showCaptions={false}
+                />
+                <style dangerouslySetInnerHTML={{
+                    __html: `
+                        .branches-carousel .animated-carousel-container img {
+                            object-fit: cover !important;
+                            object-position: center !important;
+                        }
+                    `
+                }} />
 
-            {/* Page Header */}
-            <section className="section-padding lg:pt-48 lg:pb-24 bg-white">
-                <div className="container-custom">
-                    <div className="text-center mb-12">
-                        <h1 className="text-h1 font-bold text-industrial-slate-900 mb-4">
-                            {t.branches.title}
-                        </h1>
-                        <p className="text-lg text-industrial-slate-700 max-w-3xl mx-auto">
-                            {t.branches.subtitle}
-                        </p>
+                {/* Central Overlay Text */}
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4">
+                    <div className="max-w-4xl bg-black/50 backdrop-blur-sm p-8 rounded-2xl border border-white/10 pointer-events-auto">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5, duration: 0.8 }}
+                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+                        >
+                            Our Locations
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.8, duration: 0.8 }}
+                            className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto font-light"
+                        >
+                            Pacific Hitech operates from two strategic locations to serve our global clientele. Contact the office nearest to you for personalized service and support.
+                        </motion.p>
                     </div>
                 </div>
-            </section>
+            </div>
 
             {/* India Office */}
             <section id="india" className="section-padding bg-industrial-slate-50">

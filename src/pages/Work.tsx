@@ -47,26 +47,50 @@ const Work: React.FC = () => {
     return (
         <div className="min-h-screen">
             {/* Top Carousel */}
-            <AnimatedCarousel
-                slides={workCarouselSlides}
-                autoplay={true}
-                autoplayDelay={5000}
-                effect="fade"
-                height="500px"
-                showCaptions={true}
-            />
+            <div className="relative z-0 work-carousel">
+                <AnimatedCarousel
+                    slides={workCarouselSlides}
+                    autoplay={true}
+                    autoplayDelay={5000}
+                    effect="fade"
+                    height="600px"
+                    showCaptions={false}
+                />
+                <style dangerouslySetInnerHTML={{
+                    __html: `
+                        .work-carousel .animated-carousel-container img {
+                            object-fit: cover !important;
+                            object-position: center !important;
+                        }
+                    `
+                }} />
 
-            {/* Page Header */}
-            <section className="section-padding lg:pt-48 lg:pb-24 bg-white">
-                <div className="container-custom">
-                    <div className="text-center mb-12">
-                        <h1 className="text-h1 font-bold text-industrial-slate-900 mb-4">
-                            {t.work.title}
-                        </h1>
-                        <p className="text-lg text-industrial-slate-700 max-w-3xl mx-auto">
-                            {t.work.subtitle}
-                        </p>
+                {/* Central Overlay Text */}
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4">
+                    <div className="max-w-4xl bg-black/50 backdrop-blur-sm p-8 rounded-2xl border border-white/10 pointer-events-auto">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5, duration: 0.8 }}
+                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+                        >
+                            Our Work
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.8, duration: 0.8 }}
+                            className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto font-light"
+                        >
+                            Explore our portfolio of successfully completed projects across diverse industrial sectors. Each project showcases our commitment to quality, precision, and timely delivery.
+                        </motion.p>
                     </div>
+                </div>
+            </div>
+
+            {/* Page Content */}
+            <section className="section-padding bg-white">
+                <div className="container-custom">
 
 
 

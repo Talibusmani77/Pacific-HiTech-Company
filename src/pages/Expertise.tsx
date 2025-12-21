@@ -61,7 +61,7 @@ const Expertise: React.FC = () => {
                     autoplayDelay={5000}
                     effect="fade"
                     height="700px"
-                    showCaptions={true}
+                    showCaptions={false}
                 />
                 {/* Add inline style to override image styling for full image display */}
                 <style dangerouslySetInnerHTML={{
@@ -72,21 +72,29 @@ const Expertise: React.FC = () => {
                         }
                     `
                 }} />
-            </div>
 
-            {/* Page Intro */}
-            <section className="section-padding lg:pt-48 lg:pb-24 bg-white">
-                <div className="container-custom">
-                    <div className="max-w-4xl mx-auto text-center animate-on-scroll">
-                        <h1 className="text-h1 font-bold text-industrial-slate-900 mb-6">
-                            {t.expertise.title}
-                        </h1>
-                        <p className="text-lg text-industrial-slate-700 leading-relaxed">
-                            {t.expertise.intro}
-                        </p>
+                {/* Central Overlay Text */}
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4">
+                    <div className="max-w-4xl bg-black/50 backdrop-blur-sm p-8 rounded-2xl border border-white/10 pointer-events-auto">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5, duration: 0.8 }}
+                            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+                        >
+                            Our Expertise in Heavy Fabrication, Precision Cutting & Custom Engineering
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.8, duration: 0.8 }}
+                            className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto font-light"
+                        >
+                            Pacific Hitech provides world-class services across heavy industrial fabrication, precision cutting, machining, ductwork and custom engineered solutions. Our machinery and processes ensure high accuracy and reliable delivery to global clients.
+                        </motion.p>
                     </div>
                 </div>
-            </section>
+            </div>
 
             {/* Expertise Sections */}
             <section className="bg-industrial-slate-50">
