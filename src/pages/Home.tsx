@@ -75,7 +75,7 @@ const Home: React.FC = () => {
                                     <ArrowRight className="w-5 h-5" />
                                 </button>
                                 <button
-                                    onClick={() => window.open('/brochure.pdf', '_blank')}
+                                    onClick={() => window.open('/images/ph-brochure.pdf', '_blank')}
                                     className="btn-outline border-2 border-white text-white hover:bg-white hover:text-cta-blue flex items-center space-x-2 text-base px-8 py-3"
                                 >
                                     <span>{t.home.viewBrochure}</span>
