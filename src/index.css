@@ -258,7 +258,7 @@
 
 /* RTL Marquee */
 [dir="rtl"] .animate-marquee {
-  animation: marquee-rtl 25s linear infinite;
+  animation: marquee-rtl 40s linear infinite;
 }
 
 @media (max-width: 768px) {
@@ -284,7 +284,7 @@
 
 @media (max-width: 768px) {
   .animate-marquee-reverse {
-    animation-duration: 10s;
+    animation-duration: 40s;
   }
 }
 
