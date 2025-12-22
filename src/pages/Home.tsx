@@ -125,7 +125,7 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            {/* Products Range Section - Auto Scrolling Marquee */}
+            {/* Products Range Section - Smooth Auto-Scrolling */}
             <section className="py-16 bg-industrial-slate-900 text-white overflow-hidden">
                 <div className="container-custom mb-8 text-center">
                     <h3 className="text-2xl font-bold mb-2">
@@ -136,21 +136,21 @@ const Home: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="relative w-full overflow-hidden mb-10">
-                    <div className="flex space-x-8 animate-marquee-reverse whitespace-nowrap">
-                        {[...productsList, ...productsList].map((product, index) => (
+                <div className="relative w-full overflow-x-auto scrollbar-hide mb-10">
+                    <div className="flex space-x-8 animate-marquee-reverse pb-4" style={{ width: 'max-content' }}>
+                        {[...productsList, ...productsList, ...productsList].map((product, index) => (
                             <div
                                 key={`${product.id}-${index}`}
                                 className="inline-flex flex-col items-center w-64 flex-shrink-0"
                             >
-                                <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors flex items-center justify-center p-2">
+                                <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors flex items-center justify-center p-2 cursor-pointer">
                                     <img
                                         src={product.image}
                                         alt={product.name}
                                         className="w-full h-full object-contain"
                                     />
                                 </div>
-                                <span className="text-lg font-semibold text-white text-center whitespace-normal px-2">
+                                <span className="text-lg font-semibold text-white text-center px-2 line-clamp-2">
                                     {product.name}
                                 </span>
                             </div>
@@ -252,7 +252,7 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            {/* Clients Section - Auto Scrolling Marquee */}
+            {/* Clients Section - Smooth Auto-Scrolling */}
             <section className="py-12 bg-white border-b border-industrial-slate-100 overflow-hidden">
                 <div className="container-custom mb-8 text-center">
                     <h3 className="text-2xl font-bold text-industrial-slate-900">
@@ -263,10 +263,10 @@ const Home: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="relative w-full overflow-hidden">
-                    <div className="flex space-x-12 animate-marquee whitespace-nowrap items-center">
-                        {[...clientsList, ...clientsList].map((client, index) => (
-                            <div key={`${client.id}-${index}`} className="inline-block w-40 h-24 flex-shrink-0 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
+                <div className="relative w-full overflow-x-auto scrollbar-hide">
+                    <div className="flex space-x-12 animate-marquee items-center pb-4" style={{ width: 'max-content' }}>
+                        {[...clientsList, ...clientsList, ...clientsList].map((client, index) => (
+                            <div key={`${client.id}-${index}`} className="inline-block w-40 h-24 flex-shrink-0 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer">
                                 <img
                                     src={client.image}
                                     alt={client.name}
