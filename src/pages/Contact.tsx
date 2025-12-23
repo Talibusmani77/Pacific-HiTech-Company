@@ -4,6 +4,8 @@ import AnimatedCarousel from '@/components/AnimatedCarousel';
 import ContactForm from '@/components/ContactForm';
 import { officeContacts } from '@/data/content';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const contactCarouselSlides = [
     {
@@ -27,6 +29,8 @@ const contactCarouselSlides = [
 ];
 
 const Contact: React.FC = () => {
+    const t = useTranslation();
+    const { language } = useLanguage();
     // Simplified logic as form state is handled in ContactForm
     // We can keep 'isSuccess' if we want custom message here, but simpler to delegate.
     // Removing unused state entirely for now.
@@ -77,10 +81,10 @@ const Contact: React.FC = () => {
                             {/* Saudi Arabia Office Card - First */}
                             <div className="bg-gradient-to-br from-industrial-blue-50 to-white p-8 rounded-xl shadow-lg border border-industrial-blue-100">
                                 <div className="inline-block px-4 py-2 bg-industrial-blue-500 text-white rounded-full text-sm font-semibold mb-4">
-                                    Branch Office
+                                    {t.branches.branchOffice}
                                 </div>
                                 <h3 className="text-h3 font-bold text-industrial-slate-900 mb-6">
-                                    Saudi Arabia
+                                    {language === 'ar' ? officeContacts.saudi.nameAr : officeContacts.saudi.nameEn}
                                 </h3>
 
                                 <div className="space-y-4">
@@ -118,10 +122,10 @@ const Contact: React.FC = () => {
                             {/* India Office Card - Second */}
                             <div className="bg-gradient-to-br from-industrial-steel-50 to-white p-8 rounded-xl shadow-lg border border-industrial-steel-100">
                                 <div className="inline-block px-4 py-2 bg-industrial-steel-600 text-white rounded-full text-sm font-semibold mb-4">
-                                    Head Office
+                                    {t.branches.headOffice}
                                 </div>
                                 <h3 className="text-h3 font-bold text-industrial-slate-900 mb-6">
-                                    India
+                                    {language === 'ar' ? officeContacts.india.nameAr : officeContacts.india.nameEn}
                                 </h3>
 
                                 <div className="space-y-4">

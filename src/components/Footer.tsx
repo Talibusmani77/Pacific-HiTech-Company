@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import { officeContacts } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer: React.FC = () => {
     const t = useTranslation();
+    const { language } = useLanguage();
     const currentYear = new Date().getFullYear();
 
     const quickLinks = [
@@ -76,45 +78,45 @@ const Footer: React.FC = () => {
                         {/* India Office */}
                         <div className="mb-6">
                             <h4 className="font-semibold text-industrial-blue-400 mb-3">
-                                {officeContacts.india.name}
+                                {language === 'ar' ? officeContacts.india.nameAr : officeContacts.india.nameEn}
                             </h4>
                             <ul className="space-y-2 text-sm text-industrial-slate-300">
-    <li className="flex items-start space-x-2">
-        <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
-        <div>
-            <div>{officeContacts.india.tel}</div>
-            <div>{officeContacts.india.mobile}</div>
-        </div>
-    </li>
-    <li className="flex items-start space-x-2">
-        <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-        <a
-            href={`mailto:${officeContacts.india.email}`}
-            className="hover:text-industrial-blue-400 transition-colors duration-200"
-        >
-            {officeContacts.india.email}
-        </a>
-    </li>
-    <li className="flex items-start space-x-2">
-        <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-        <a
-            href={`mailto:${officeContacts.saudi.email}`}
-            className="hover:text-industrial-blue-400 transition-colors duration-200"
-        >
-            {officeContacts.saudi.email}
-        </a>
-    </li>
-    <li className="flex items-start space-x-2">
-        <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-        <span>{officeContacts.india.address}</span>
-    </li>
-</ul>
+                                <li className="flex items-start space-x-2">
+                                    <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                                    <div>
+                                        <div>{officeContacts.india.tel}</div>
+                                        <div>{officeContacts.india.mobile}</div>
+                                    </div>
+                                </li>
+                                <li className="flex items-start space-x-2">
+                                    <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                                    <a
+                                        href={`mailto:${officeContacts.india.email}`}
+                                        className="hover:text-industrial-blue-400 transition-colors duration-200"
+                                    >
+                                        {officeContacts.india.email}
+                                    </a>
+                                </li>
+                                <li className="flex items-start space-x-2">
+                                    <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                                    <a
+                                        href={`mailto:${officeContacts.saudi.email}`}
+                                        className="hover:text-industrial-blue-400 transition-colors duration-200"
+                                    >
+                                        {officeContacts.saudi.email}
+                                    </a>
+                                </li>
+                                <li className="flex items-start space-x-2">
+                                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                                    <span>{officeContacts.india.address}</span>
+                                </li>
+                            </ul>
                         </div>
 
                         {/* Saudi Arabia Office */}
                         <div>
                             <h4 className="font-semibold text-industrial-blue-400 mb-3">
-                                {officeContacts.saudi.name}
+                                {language === 'ar' ? officeContacts.saudi.nameAr : officeContacts.saudi.nameEn}
                             </h4>
                             <ul className="space-y-2 text-sm text-industrial-slate-300">
                                 <li className="flex items-start space-x-2">

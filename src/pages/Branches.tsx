@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import AnimatedCarousel from '@/components/AnimatedCarousel';
 import { officeContacts } from '@/data/content';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { Phone, Mail, MapPin, Navigation, FileText } from 'lucide-react';
 
 const branchesCarouselSlides = [
@@ -29,6 +30,7 @@ const branchesCarouselSlides = [
 
 const Branches: React.FC = () => {
     const t = useTranslation();
+    const { language } = useLanguage();
     const location = useLocation();
 
     useEffect(() => {
@@ -109,7 +111,7 @@ const Branches: React.FC = () => {
                                     {t.branches.headOffice}
                                 </div>
                                 <h2 className="text-h2 font-bold text-industrial-slate-900 mb-6">
-                                    {officeContacts.india.name}
+                                    {language === 'ar' ? officeContacts.india.nameAr : officeContacts.india.nameEn}
                                 </h2>
 
                                 <div className="space-y-6">
@@ -253,7 +255,7 @@ const Branches: React.FC = () => {
                                     {t.branches.branchOffice}
                                 </div>
                                 <h2 className="text-h2 font-bold text-industrial-slate-900 mb-6">
-                                    {officeContacts.saudi.name}
+                                    {language === 'ar' ? officeContacts.saudi.nameAr : officeContacts.saudi.nameEn}
                                 </h2>
 
                                 <div className="space-y-6">
