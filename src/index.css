@@ -237,12 +237,12 @@
 
 /* Marquee Animation */
 .animate-marquee {
-  animation: marquee 60s linear infinite;
+  animation: marquee 100s linear infinite;
 }
 
 @media (max-width: 768px) {
   .animate-marquee {
-    animation-duration: 60s;
+    animation-duration: 100s;
   }
 }
 
@@ -258,12 +258,12 @@
 
 /* RTL Marquee */
 [dir="rtl"] .animate-marquee {
-  animation: marquee-rtl 60s linear infinite;
+  animation: marquee-rtl 100s linear infinite;
 }
 
 @media (max-width: 768px) {
   [dir="rtl"] .animate-marquee {
-    animation-duration: 60s;
+    animation-duration: 100s;
   }
 }
 
@@ -279,12 +279,12 @@
 
 /* Reverse Marquee (Left to Right) */
 .animate-marquee-reverse {
-  animation: marquee-reverse 60s linear infinite;
+  animation: marquee-reverse 100s linear infinite;
 }
 
 @media (max-width: 768px) {
   .animate-marquee-reverse {
-    animation-duration: 60s;
+    animation-duration: 100s;
   }
 }
 
