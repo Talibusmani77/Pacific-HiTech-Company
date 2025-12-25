@@ -6,9 +6,11 @@ import * as Icons from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Home: React.FC = () => {
     const t = useTranslation();
+    const { language } = useLanguage();
     const observerRef = useRef<IntersectionObserver | null>(null);
 
     useEffect(() => {
@@ -205,9 +207,11 @@ const Home: React.FC = () => {
                                     </div>
                                     <div className="p-6">
                                         <h3 className="text-h3 font-semibold text-industrial-slate-900 mb-4">
-                                            {service.title}
+                                            {language === 'ar' ? service.titleAr : service.titleEn}
                                         </h3>
-                                        <p className="text-industrial-slate-600">{service.description}</p>
+                                        <p className="text-industrial-slate-600 leading-relaxed">
+                                            {language === 'ar' ? service.descriptionAr : service.descriptionEn}
+                                        </p>
                                     </div>
                                 </motion.div>
                             );

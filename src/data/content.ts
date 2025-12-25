@@ -46,7 +46,7 @@ export const productsList = [
     },
     {
         id: 3,
-        name: " Leader Cable trey",
+        name: " Ladder type Cable trey",
         description: "Industrial strength bolts, nuts, and screws",
         image: "/images/products/p-3.webp"
     },
@@ -100,18 +100,6 @@ export const productsList = [
     },
     {
         id: 8,
-        name: "Slopped Channels",
-        description: "PPE and industrial safety gear",
-        image: "/images/products/p-12.webp"
-    },
-    {
-        id: 8,
-        name: "Slote Drains",
-        description: "PPE and industrial safety gear",
-        image: "/images/products/p-13.webp"
-    },
-    {
-        id: 8,
         name: "Square Gratings",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-14.webp"
@@ -127,12 +115,6 @@ export const productsList = [
         name: "Manhole Square Covers",
         description: "PPE and industrial safety gear",
         image: "/images/products/p-16.webp"
-    },
-    {
-        id: 8,
-        name: "Rectangular Covers",
-        description: "PPE and industrial safety gear",
-        image: "/images/products/p-17.webp"
     },
     {
         id: 8,
@@ -154,9 +136,33 @@ export const productsList = [
     },
     {
         id: 8,
-        name: "Round Duct",
+        name: "Tank",
         description: "PPE and industrial safety gear",
-        image: "/images/products/p-21.webp"
+        image: "/images/projects/pro1.webp"
+    },
+    {
+        id: 8,
+        name: "Crash Barrier",
+        description: "PPE and industrial safety gear",
+        image: "/images/projects/pro14.webp"
+    },
+    {
+        id: 8,
+        name: "Gratings",
+        description: "PPE and industrial safety gear",
+        image: "/images/projects/pro16.webp"
+    },
+    {
+        id: 8,
+        name: "Guardrails",
+        description: "PPE and industrial safety gear",
+        image: "/images/projects/pro5.webp"
+    },
+    {
+        id: 8,
+        name: "Guardrail Drawings",
+        description: "PPE and industrial safety gear",
+        image: "/images/products/p-13.webp"
     }
 ];
 
@@ -164,43 +170,55 @@ export const productsList = [
 export const serviceCards = [
     {
         id: 1,
-        title: "Steel Fabrication",
-        description: "Heavy-duty structural steel fabrication with precision welding and assembly.",
+        titleEn: "Steel Fabrication",
+        titleAr: "تصنيع الصلب",
+        descriptionEn: "Heavy-duty structural steel fabrication with precision welding and assembly.",
+        descriptionAr: "تصنيع الصلب الإنشائي للخدمة الشاقة مع اللحام والتجميع الدقيق.",
         image: "/images/services/steel.webp",
         icon: "Wrench"
     },
     {
         id: 2,
-        title: "Construction Support",
-        description: "Comprehensive construction support services for industrial projects.",
+        titleEn: "Construction Support",
+        titleAr: "دعم البناء",
+        descriptionEn: "Comprehensive construction support services for industrial projects.",
+        descriptionAr: "خدمات دعم البناء الشاملة للمشاريع الصناعية.",
         image: "/images/services/support.webp",
         icon: "HardHat"
     },
     {
         id: 3,
-        title: "Precision Cutting",
-        description: "Advanced laser and CNC cutting for complex geometries and tight tolerances.",
+        titleEn: "Precision Cutting",
+        titleAr: "القطع الدقيق",
+        descriptionEn: "Advanced laser and CNC cutting for complex geometries and tight tolerances.",
+        descriptionAr: "القطع بالليزر وCNC المتقدم للأشكال الهندسية المعقدة والتفاوتات الضيقة.",
         image: "/images/services/cut.webp",
         icon: "Zap"
     },
     {
         id: 4,
-        title: "Custom Design Fabrication",
-        description: "CAD-driven custom fabrication using AutoCAD and SolidWorks.",
+        titleEn: "Custom Design Fabrication",
+        titleAr: "تصنيع التصاميم المخصصة",
+        descriptionEn: "CAD-driven custom fabrication using AutoCAD and SolidWorks.",
+        descriptionAr: "التصنيع المخصص باستخدام CAD مع AutoCAD وSolidWorks.",
         image: "/images/services/custom.webp",
         icon: "Pencil"
     },
     {
         id: 5,
-        title: "High-End Machinery",
-        description: "State-of-the-art equipment for precision manufacturing and fabrication.",
+        titleEn: "High-End Machinery",
+        titleAr: "آلات عالية الجودة",
+        descriptionEn: "State-of-the-art equipment for precision manufacturing and fabrication.",
+        descriptionAr: "معدات حديثة للتصنيع الدقيق والتصنيع.",
         image: "/images/services/machines.webp",
         icon: "Cog"
     },
     {
         id: 6,
-        title: "Trading & Equipment Services",
-        description: "Equipment supply, trading, and technical support services.",
+        titleEn: "Trading & Equipment Services",
+        titleAr: "التجارة وخدمات المعدات",
+        descriptionEn: "Equipment supply, trading, and technical support services.",
+        descriptionAr: "توريد المعدات والتجارة وخدمات الدعم الفني.",
         image: "/images/services/trading.webp",
         icon: "Package"
     }
