@@ -149,6 +149,7 @@ const Home: React.FC = () => {
                                     <img
                                         src={product.image}
                                         alt={product.name}
+                                        loading="lazy"
                                         className="w-full h-full object-contain"
                                     />
                                 </div>
@@ -195,7 +196,8 @@ const Home: React.FC = () => {
                                     <div className="relative h-48 overflow-hidden">
                                         <img
                                             src={service.image}
-                                            alt={service.title}
+                                            alt={language === 'ar' ? service.titleAr : service.titleEn}
+                                            loading="lazy"
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-industrial-slate-900/80 to-transparent" />
@@ -274,6 +276,7 @@ const Home: React.FC = () => {
                                 <img
                                     src={client.image}
                                     alt={client.name}
+                                    loading="lazy"
                                     className="w-full h-full object-contain mix-blend-multiply"
                                 />
                             </div>
